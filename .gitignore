@@ -1,0 +1,8 @@
+# Archivos y directorios generados por IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Directorio public/ en la raíz del proyecto
+public/

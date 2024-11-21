@@ -1,0 +1,4 @@
+baseURL = 'http://duv0-x.cloud/'
+languageCode = 'en-us'
+title = 'Duv0-x Site'
+theme = 'terminal'
