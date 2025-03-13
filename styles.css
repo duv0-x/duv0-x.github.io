@@ -23,10 +23,6 @@ header {
     word-wrap: break-word;
 }
 
-.container.social-networks p {
-    text-align: left;
-}
-
 .about-container {
     display: flex;
     align-items: center;
