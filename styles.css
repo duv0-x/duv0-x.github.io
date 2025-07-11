@@ -25,7 +25,7 @@ header {
 
 .about-container {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     gap: 20px;
 }
@@ -40,7 +40,7 @@ header {
 
 .about-container p {
     max-width: 50%;
-    text-align: center;
+    text-align: left;
 }
 
 img {
