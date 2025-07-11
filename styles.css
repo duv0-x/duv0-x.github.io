@@ -31,7 +31,7 @@ header {
 }
 
 .about-container img {
-    max-width: 25%;
+    /*max-width: 25%;*/
     image-rendering: pixelated;
     border: 4px solid black;  /* Marco negro */
     padding: 4px;  /* Espaciado interno */
