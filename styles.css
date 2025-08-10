@@ -36,7 +36,7 @@ header {
     image-rendering: pixelated;
     border: 4px solid black;  /* Marco negro */
     padding: 4px;  /* Espaciado interno */
-    background-color: white;
+    background-color: #98d1cc;
     align-items: center;
     margin-left: 10px;
 }
