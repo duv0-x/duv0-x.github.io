@@ -97,21 +97,33 @@
                 parent: ['duv0-x.github.io', 'localhost']
             });
             isEmbedInitialized = true;
+            console.log('✅ Twitch embed initialized');
         }
     }
 
     // Verificar si duv0_x está en vivo
     async function checkIfLive() {
         try {
+            console.log('🔍 Checking stream status...');
             const response = await fetch('https://decapi.me/twitch/uptime/duv0_x');
             const uptime = await response.text();
+            console.log('📡 API Response:', uptime);
 
             const liveIndicator = document.getElementById('live-indicator');
             const twitchEmbed = document.getElementById('twitch-embed');
             const offlineMessage = document.getElementById('offline-message');
 
-            // Si está en vivo, mostrar reproductor y ocultar mensaje offline
-            if (uptime && !uptime.includes('offline') && !uptime.includes('error')) {
+            // Mejorar detección: verificar que la respuesta sea un tiempo válido
+            // La API devuelve el tiempo de stream (ej: "2 hours, 30 minutes") cuando está live
+            // o "duv0_x is offline" cuando no está transmitiendo
+            const isLive = uptime &&
+                          !uptime.toLowerCase().includes('offline') &&
+                          !uptime.toLowerCase().includes('error') &&
+                          uptime.trim() !== '';
+
+            console.log('🎥 Stream status:', isLive ? 'LIVE' : 'OFFLINE');
+
+            if (isLive) {
                 liveIndicator.style.display = 'block';
                 twitchEmbed.style.display = 'block';
                 offlineMessage.style.display = 'none';
@@ -126,15 +138,19 @@
                 offlineMessage.style.display = 'block';
             }
         } catch (error) {
-            console.log('No se pudo verificar el estado del stream');
+            console.error('❌ Error checking stream status:', error);
+            // En caso de error, mostrar mensaje offline
+            document.getElementById('live-indicator').style.display = 'none';
+            document.getElementById('twitch-embed').style.display = 'none';
+            document.getElementById('offline-message').style.display = 'block';
         }
     }
 
     // Verificar al cargar la página
     checkIfLive();
 
-    // Verificar cada 5 minutos
-    setInterval(checkIfLive, 300000);
+    // Verificar cada 1 minuto (60000ms) en lugar de 5 minutos para detección más rápida
+    setInterval(checkIfLive, 60000);
 </script>
 </body>
 </html>
