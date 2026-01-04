@@ -52,10 +52,20 @@
     <p>💼 <a href="https://www.linkedin.com/in/duvanballen" style="color: #e06c76;">LinkedIn</a> 🧑🏻‍💻 <a href="https://github.com/duv0-x" style="color: #98d1cc;">GitHub</a> 🐘 <a href="https://mastodon.social/@duv0_x" rel="me" style="color: #98d1cc;">Mastodon</a></p><br>
 </div>
 
-<div class="container social-networks" id="duv0x-tv-section" style="display: none;">
+<div class="container social-networks" id="duv0x-tv-section">
     <h3>> Duv0-x TV 📺</h3>
+    <p id="live-indicator" style="display: none; margin: 5px 0; color: #e06c76; font-size: 8px;">🔴 EN VIVO AHORA</p>
     <div id="twitch-embed"></div>
-    <p style="margin-top: 10px; color: #98d1cc; font-size: 8px;">🔴 Streaming en vivo</p>
+
+    <div class="stream-schedule">
+        <h4>Horario de Streams:</h4>
+        <p>
+            📅 Lunes - Viernes<br>
+            🕐 17:30 - 20:00 COT (UTC-05:00)<br><br>
+            📅 Sábados<br>
+            🕐 09:00 - 13:00 COT (UTC-05:00)
+        </p>
+    </div>
 </div>
 
 <footer>
@@ -64,32 +74,45 @@
 
 <script src="https://embed.twitch.tv/embed/v1.js"></script>
 <script>
+    let embed;
+    let isEmbedInitialized = false;
+
+    // Inicializar el reproductor de Twitch
+    function initTwitchEmbed() {
+        if (!isEmbedInitialized) {
+            embed = new Twitch.Embed('twitch-embed', {
+                width: '100%',
+                height: 360,
+                channel: 'duv0_x',
+                layout: 'video',
+                autoplay: false,
+                parent: ['duv0-x.github.io', 'localhost']
+            });
+            isEmbedInitialized = true;
+        }
+    }
+
     // Verificar si duv0_x está en vivo
     async function checkIfLive() {
         try {
             const response = await fetch('https://decapi.me/twitch/uptime/duv0_x');
             const uptime = await response.text();
 
-            // Si no está offline, mostrar el reproductor
-            if (uptime && !uptime.includes('offline') && !uptime.includes('error')) {
-                document.getElementById('duv0x-tv-section').style.display = 'block';
+            const liveIndicator = document.getElementById('live-indicator');
 
-                // Inicializar el reproductor de Twitch
-                new Twitch.Embed('twitch-embed', {
-                    width: '100%',
-                    height: 360,
-                    channel: 'duv0_x',
-                    layout: 'video',
-                    autoplay: false,
-                    parent: ['duv0-x.github.io', 'localhost']
-                });
+            // Si está en vivo, mostrar indicador
+            if (uptime && !uptime.includes('offline') && !uptime.includes('error')) {
+                liveIndicator.style.display = 'block';
+            } else {
+                liveIndicator.style.display = 'none';
             }
         } catch (error) {
             console.log('No se pudo verificar el estado del stream');
         }
     }
 
-    // Verificar al cargar la página
+    // Inicializar al cargar la página
+    initTwitchEmbed();
     checkIfLive();
 
     // Verificar cada 5 minutos
