@@ -12,7 +12,6 @@
 <body>
 <header>
     <h1>duv0_x profile_</h1>
-    <button id="lang-toggle" onclick="toggleLanguage()">🌐 ES</button>
 </header>
 
 <div class="container about-container">
@@ -39,6 +38,7 @@
         <img src="https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonwebservices&logoColor=white" alt="AWS"/>
         <img src="https://img.shields.io/badge/GCP-4285F4?style=flat&logo=googlecloud&logoColor=white" alt="GCP"/>
         <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white" alt="Terraform"/>
+        <img src="https://img.shields.io/badge/Pulumi-8A3391?style=flat&logo=pulumi&logoColor=white" alt="Pulumi"/>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python"/>
         <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go"/>
         <img src="https://img.shields.io/badge/Shell_Script-121011?style=flat&logo=gnu-bash&logoColor=white" alt="Shell Script"/>
@@ -53,14 +53,19 @@
 <div class="container social-networks" id="duv0x-tv-section">
     <h3>> Duv0-x TV 📺</h3>
     <p id="live-indicator" style="display: none; margin: 5px 0; color: #e06c76; font-size: 8px;">🔴 EN VIVO AHORA</p>
+
     <div id="twitch-embed"></div>
+    <div id="offline-message" class="offline-placeholder">
+        <p>📺 Canal offline</p>
+        <p style="font-size: 8px; margin-top: 5px;">Vuelve pronto para ver el stream</p>
+    </div>
 
     <div class="stream-schedule">
-        <h4 id="schedule-title">Streaming Schedule:</h4>
+        <h4>Streaming Schedule:</h4>
         <p>
-            📅 <span id="weekday-label">Monday - Friday</span><br>
+            📅 Monday - Friday<br>
             🕐 17:30 - 20:00 COT (UTC-05:00)<br><br>
-            📅 <span id="saturday-label">Saturdays</span><br>
+            📅 Saturdays<br>
             🕐 09:00 - 13:00 COT (UTC-05:00)
         </p>
     </div>
@@ -77,38 +82,6 @@
 
 <script src="https://embed.twitch.tv/embed/v1.js"></script>
 <script>
-    // Language toggle functionality
-    let currentLang = 'en';
-
-    const translations = {
-        en: {
-            scheduleTitle: 'Streaming Schedule:',
-            weekdayLabel: 'Monday - Friday',
-            saturdayLabel: 'Saturdays',
-            liveIndicator: '🔴 LIVE NOW',
-            langButton: '🌐 ES'
-        },
-        es: {
-            scheduleTitle: 'Horario de Streams:',
-            weekdayLabel: 'Lunes - Viernes',
-            saturdayLabel: 'Sábados',
-            liveIndicator: '🔴 EN VIVO AHORA',
-            langButton: '🌐 EN'
-        }
-    };
-
-    function toggleLanguage() {
-        currentLang = currentLang === 'en' ? 'es' : 'en';
-        const t = translations[currentLang];
-
-        document.getElementById('schedule-title').textContent = t.scheduleTitle;
-        document.getElementById('weekday-label').textContent = t.weekdayLabel;
-        document.getElementById('saturday-label').textContent = t.saturdayLabel;
-        document.getElementById('live-indicator').textContent = t.liveIndicator;
-        document.getElementById('lang-toggle').textContent = t.langButton;
-    }
-
-    // Twitch embed functionality
     let embed;
     let isEmbedInitialized = false;
 
@@ -117,7 +90,7 @@
         if (!isEmbedInitialized) {
             embed = new Twitch.Embed('twitch-embed', {
                 width: '100%',
-                height: 360,
+                height: 280,
                 channel: 'duv0_x',
                 layout: 'video',
                 autoplay: false,
@@ -134,20 +107,30 @@
             const uptime = await response.text();
 
             const liveIndicator = document.getElementById('live-indicator');
+            const twitchEmbed = document.getElementById('twitch-embed');
+            const offlineMessage = document.getElementById('offline-message');
 
-            // Si está en vivo, mostrar indicador
+            // Si está en vivo, mostrar reproductor y ocultar mensaje offline
             if (uptime && !uptime.includes('offline') && !uptime.includes('error')) {
                 liveIndicator.style.display = 'block';
+                twitchEmbed.style.display = 'block';
+                offlineMessage.style.display = 'none';
+
+                // Inicializar embed solo si está en vivo
+                if (!isEmbedInitialized) {
+                    initTwitchEmbed();
+                }
             } else {
                 liveIndicator.style.display = 'none';
+                twitchEmbed.style.display = 'none';
+                offlineMessage.style.display = 'block';
             }
         } catch (error) {
             console.log('No se pudo verificar el estado del stream');
         }
     }
 
-    // Inicializar al cargar la página
-    initTwitchEmbed();
+    // Verificar al cargar la página
     checkIfLive();
 
     // Verificar cada 5 minutos
