@@ -193,14 +193,29 @@ Before committing changes to this **static site**, verify:
 - Preconnect to fonts.googleapis.com and fonts.gstatic.com for performance
 
 ### GitHub Stats API
-```html
-https://github-readme-stats.vercel.app/api/top-langs/?username=duv0-x&layout=compact&theme=gotham&hide_border=true&langs_count=8
 
-https://github-readme-stats.vercel.app/api?username=duv0-x&show_icons=true&theme=gotham&hide=stars,issues&show=prs_merged_percentage&hide_rank=true&hide_border=true&custom_title=GitHub Stats
+**Current Service**: Using `stats.programcx.cn` (alternative instance)
+
+```html
+https://stats.programcx.cn/api/top-langs/?username=duv0-x&layout=compact&theme=gotham&hide_border=true&langs_count=8
+
+https://stats.programcx.cn/api?username=duv0-x&show_icons=true&theme=gotham&hide=stars,issues&show=prs_merged_percentage&hide_rank=true&hide_border=true&custom_title=GitHub Stats
 ```
+
+**Why the alternative instance?**
+- The original `github-readme-stats.vercel.app` experienced downtime and rate limiting issues (Jan 2026)
+- Switched to `stats.programcx.cn` - a community-hosted instance with better uptime
+- Uses same API as the original github-readme-stats project
+
+**Styling**:
 - Uses `gotham` theme to match site colors
 - Hides borders for cleaner integration
 - Parameters are carefully tuned - don't modify without testing
+
+**Other Alternatives if Current Fails**:
+- GitHub Profile Trophy: `https://github-profile-trophy.vercel.app/?username=duv0-x&theme=onestar`
+- Streak Stats: `https://streak-stats.demolab.com/?user=duv0-x&theme=dark`
+- Self-host on Vercel with own GitHub token (most reliable)
 
 ## HTML Best Practices for This Site
 
