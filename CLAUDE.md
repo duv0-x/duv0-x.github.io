@@ -223,8 +223,7 @@ Located in index.html lines 37-51. Displays key technologies and tools using shi
 - **Cloud**: AWS
 - **IaC**: Terraform
 - **Languages**: Python, Go
-- **CI/CD**: GitHub Actions
-- **Monitoring**: Prometheus, Grafana
+- **CI/CD**: GitHub Actions, CircleCI
 - **OS**: Linux
 
 **Badge Format**:
