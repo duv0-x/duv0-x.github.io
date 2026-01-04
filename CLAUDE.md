@@ -192,14 +192,12 @@ Before committing changes to this **static site**, verify:
 - Loaded via Google Fonts CDN
 - Preconnect to fonts.googleapis.com and fonts.gstatic.com for performance
 
-### GitHub Stats API
+### GitHub Top Languages Stats
 
 **Current Service**: Using `stats.programcx.cn` (alternative instance)
 
 ```html
 https://stats.programcx.cn/api/top-langs/?username=duv0-x&layout=compact&theme=gotham&hide_border=true&langs_count=8
-
-https://stats.programcx.cn/api?username=duv0-x&show_icons=true&theme=gotham&hide=stars,issues&show=prs_merged_percentage&hide_rank=true&hide_border=true&custom_title=GitHub Stats
 ```
 
 **Why the alternative instance?**
@@ -210,33 +208,42 @@ https://stats.programcx.cn/api?username=duv0-x&show_icons=true&theme=gotham&hide
 **Styling**:
 - Uses `gotham` theme to match site colors
 - Hides borders for cleaner integration
-- Parameters are carefully tuned - don't modify without testing
+- Shows top 8 languages in compact layout
 
-**Other Alternatives if Current Fails**:
-- GitHub Profile Trophy: `https://github-profile-trophy.vercel.app/?username=duv0-x&theme=onestar`
-- Streak Stats: `https://streak-stats.demolab.com/?user=duv0-x&theme=dark`
-- Self-host on Vercel with own GitHub token (most reliable)
+**Note**: Only the Top Languages widget is used. Other stats widgets (GitHub Stats, Streak Stats) were removed due to API reliability issues and replaced with static Tech Stack badges.
 
-### GitHub Streak Stats
+### Tech Stack Badges
 
-**Service**: Using `streak-stats.demolab.com` (contribution streak widget)
+**Service**: Using `shields.io` (static badge generator)
 
+Located in index.html lines 37-51. Displays key technologies and tools using shields.io badges.
+
+**Current Technologies**:
+- **Containers**: Docker, Kubernetes
+- **Cloud**: AWS
+- **IaC**: Terraform
+- **Languages**: Python, Go
+- **CI/CD**: GitHub Actions
+- **Monitoring**: Prometheus, Grafana
+- **OS**: Linux
+
+**Badge Format**:
 ```html
-https://streak-stats.demolab.com?user=duv0-x&theme=gotham&hide_border=true&date_format=M%20j%5B%2C%20Y%5D
+<img src="https://img.shields.io/badge/TechName-ColorHex?style=flat&logo=logoname&logoColor=white" alt="TechName"/>
 ```
 
-**What it shows**:
-- Current streak (consecutive days contributing)
-- Longest streak achieved
-- Total contributions
-- Mobile-friendly and responsive design
+**Updating Tech Stack**:
+- Add/remove badges as needed to reflect current skills
+- Use official brand colors for consistency
+- Keep logos from simple-icons.org (used by shields.io)
+- Maintain `style=flat` for clean, minimal look
+- All badges should have descriptive alt text for accessibility
 
-**Customization**:
-- `theme=gotham`: Matches the site's color scheme (same as other stats)
-- `hide_border=true`: Clean integration without borders
-- `date_format`: Customized date display format
-
-**Note**: This widget is more compact than the full contribution graph and displays better on mobile devices
+**Finding Badge URLs**:
+1. Visit https://shields.io
+2. Use format: `/badge/<LABEL>-<COLOR>?style=flat&logo=<LOGO>&logoColor=white`
+3. Find logo names at https://simpleicons.org
+4. Use official brand colors when possible
 
 ## HTML Best Practices for This Site
 
