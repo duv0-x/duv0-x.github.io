@@ -84,3 +84,21 @@ footer {
     font-size: 8px;
     word-wrap: break-word;
 }
+
+/* Duv0-x TV Section */
+#duv0x-tv-section {
+    padding: 10px;
+}
+
+#twitch-embed {
+    max-width: 100%;
+    border: 4px solid #27a888;
+    background-color: #0c1015;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#twitch-embed iframe {
+    display: block;
+    border-radius: 6px;
+}

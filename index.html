@@ -52,8 +52,48 @@
     <p>💼 <a href="https://www.linkedin.com/in/duvanballen" style="color: #e06c76;">LinkedIn</a> 🧑🏻‍💻 <a href="https://github.com/duv0-x" style="color: #98d1cc;">GitHub</a> 🐘 <a href="https://mastodon.social/@duv0_x" rel="me" style="color: #98d1cc;">Mastodon</a></p><br>
 </div>
 
+<div class="container social-networks" id="duv0x-tv-section" style="display: none;">
+    <h3>> Duv0-x TV 📺</h3>
+    <div id="twitch-embed"></div>
+    <p style="margin-top: 10px; color: #98d1cc; font-size: 8px;">🔴 Streaming en vivo</p>
+</div>
+
 <footer>
     <p>Build with ☕ from Colombia 🇨🇴</p>
 </footer>
+
+<script src="https://embed.twitch.tv/embed/v1.js"></script>
+<script>
+    // Verificar si duv0_x está en vivo
+    async function checkIfLive() {
+        try {
+            const response = await fetch('https://decapi.me/twitch/uptime/duv0_x');
+            const uptime = await response.text();
+
+            // Si no está offline, mostrar el reproductor
+            if (uptime && !uptime.includes('offline') && !uptime.includes('error')) {
+                document.getElementById('duv0x-tv-section').style.display = 'block';
+
+                // Inicializar el reproductor de Twitch
+                new Twitch.Embed('twitch-embed', {
+                    width: '100%',
+                    height: 360,
+                    channel: 'duv0_x',
+                    layout: 'video',
+                    autoplay: false,
+                    parent: ['duv0-x.github.io', 'localhost']
+                });
+            }
+        } catch (error) {
+            console.log('No se pudo verificar el estado del stream');
+        }
+    }
+
+    // Verificar al cargar la página
+    checkIfLive();
+
+    // Verificar cada 5 minutos
+    setInterval(checkIfLive, 300000);
+</script>
 </body>
 </html>
