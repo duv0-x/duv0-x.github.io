@@ -217,27 +217,26 @@ https://stats.programcx.cn/api?username=duv0-x&show_icons=true&theme=gotham&hide
 - Streak Stats: `https://streak-stats.demolab.com/?user=duv0-x&theme=dark`
 - Self-host on Vercel with own GitHub token (most reliable)
 
-### GitHub Contribution Graph
+### GitHub Streak Stats
 
-**Service**: Using `github.pumbas.net` (contribution calendar widget)
+**Service**: Using `streak-stats.demolab.com` (contribution streak widget)
 
 ```html
-https://github.pumbas.net/api/contributions/duv0-x?colour=27a888&bgColour=0c1015&dotColour=98d1cc&days=365&borderRadius=10
+https://streak-stats.demolab.com?user=duv0-x&theme=gotham&hide_border=true&date_format=M%20j%5B%2C%20Y%5D
 ```
 
 **What it shows**:
-- Daily GitHub contribution activity (commits, PRs, issues, reviews)
-- Last 365 days of contributions
-- Visual "heatmap" calendar similar to GitHub profile
+- Current streak (consecutive days contributing)
+- Longest streak achieved
+- Total contributions
+- Mobile-friendly and responsive design
 
 **Customization**:
-- `colour=27a888`: Primary accent color (matches site theme)
-- `bgColour=0c1015`: Background color (matches container background)
-- `dotColour=98d1cc`: Individual day dots color (matches secondary accent)
-- `days=365`: Shows full year of contributions
-- `borderRadius=10`: Rounded corners to match site aesthetic
+- `theme=gotham`: Matches the site's color scheme (same as other stats)
+- `hide_border=true`: Clean integration without borders
+- `date_format`: Customized date display format
 
-**Note**: This widget updates dynamically as contributions are made to GitHub
+**Note**: This widget is more compact than the full contribution graph and displays better on mobile devices
 
 ## HTML Best Practices for This Site
 
