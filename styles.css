@@ -55,6 +55,10 @@ header {
     background-color: rgba(39, 168, 136, 0.1);
 }
 
+.info-label {
+    color: #27a888;
+}
+
 .stats {
     background: #0c1015;
 }
