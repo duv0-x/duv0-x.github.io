@@ -217,6 +217,28 @@ https://stats.programcx.cn/api?username=duv0-x&show_icons=true&theme=gotham&hide
 - Streak Stats: `https://streak-stats.demolab.com/?user=duv0-x&theme=dark`
 - Self-host on Vercel with own GitHub token (most reliable)
 
+### GitHub Contribution Graph
+
+**Service**: Using `github.pumbas.net` (contribution calendar widget)
+
+```html
+https://github.pumbas.net/api/contributions/duv0-x?colour=27a888&bgColour=0c1015&dotColour=98d1cc&days=365&borderRadius=10
+```
+
+**What it shows**:
+- Daily GitHub contribution activity (commits, PRs, issues, reviews)
+- Last 365 days of contributions
+- Visual "heatmap" calendar similar to GitHub profile
+
+**Customization**:
+- `colour=27a888`: Primary accent color (matches site theme)
+- `bgColour=0c1015`: Background color (matches container background)
+- `dotColour=98d1cc`: Individual day dots color (matches secondary accent)
+- `days=365`: Shows full year of contributions
+- `borderRadius=10`: Rounded corners to match site aesthetic
+
+**Note**: This widget updates dynamically as contributions are made to GitHub
+
 ## HTML Best Practices for This Site
 
 1. **Language**: Set to Spanish (`lang="es"`) but content is multilingual
