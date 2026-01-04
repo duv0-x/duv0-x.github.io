@@ -12,6 +12,26 @@ header {
     background-color: #0c1015;
     color: #27a888;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lang-toggle {
+    font-family: "Press Start 2P", serif;
+    background-color: #27a888;
+    color: #0c1015;
+    border: 2px solid #98d1cc;
+    padding: 5px 10px;
+    font-size: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#lang-toggle:hover {
+    background-color: #98d1cc;
+    color: #000;
 }
 
 .container {

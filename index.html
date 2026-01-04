@@ -12,6 +12,7 @@
 <body>
 <header>
     <h1>duv0_x profile_</h1>
+    <button id="lang-toggle" onclick="toggleLanguage()">🌐 ES</button>
 </header>
 
 <div class="container about-container">
@@ -36,6 +37,7 @@
         <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker"/>
         <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white" alt="Kubernetes"/>
         <img src="https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonwebservices&logoColor=white" alt="AWS"/>
+        <img src="https://img.shields.io/badge/GCP-4285F4?style=flat&logo=googlecloud&logoColor=white" alt="GCP"/>
         <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white" alt="Terraform"/>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python"/>
         <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go"/>
@@ -44,6 +46,7 @@
         <img src="https://img.shields.io/badge/CircleCI-343434?style=flat&logo=circleci&logoColor=white" alt="CircleCI"/>
         <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" alt="Git"/>
         <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux"/>
+        <img src="https://img.shields.io/badge/IoT-00979D?style=flat&logo=iot&logoColor=white" alt="IoT"/>
     </p><br>
 </div>
 
@@ -53,11 +56,11 @@
     <div id="twitch-embed"></div>
 
     <div class="stream-schedule">
-        <h4>Streaming Schedule:</h4>
+        <h4 id="schedule-title">Streaming Schedule:</h4>
         <p>
-            📅 Monday - Friday<br>
+            📅 <span id="weekday-label">Monday - Friday</span><br>
             🕐 17:30 - 20:00 COT (UTC-05:00)<br><br>
-            📅 Saturdays<br>
+            📅 <span id="saturday-label">Saturdays</span><br>
             🕐 09:00 - 13:00 COT (UTC-05:00)
         </p>
     </div>
@@ -74,6 +77,38 @@
 
 <script src="https://embed.twitch.tv/embed/v1.js"></script>
 <script>
+    // Language toggle functionality
+    let currentLang = 'en';
+
+    const translations = {
+        en: {
+            scheduleTitle: 'Streaming Schedule:',
+            weekdayLabel: 'Monday - Friday',
+            saturdayLabel: 'Saturdays',
+            liveIndicator: '🔴 LIVE NOW',
+            langButton: '🌐 ES'
+        },
+        es: {
+            scheduleTitle: 'Horario de Streams:',
+            weekdayLabel: 'Lunes - Viernes',
+            saturdayLabel: 'Sábados',
+            liveIndicator: '🔴 EN VIVO AHORA',
+            langButton: '🌐 EN'
+        }
+    };
+
+    function toggleLanguage() {
+        currentLang = currentLang === 'en' ? 'es' : 'en';
+        const t = translations[currentLang];
+
+        document.getElementById('schedule-title').textContent = t.scheduleTitle;
+        document.getElementById('weekday-label').textContent = t.weekdayLabel;
+        document.getElementById('saturday-label').textContent = t.saturdayLabel;
+        document.getElementById('live-indicator').textContent = t.liveIndicator;
+        document.getElementById('lang-toggle').textContent = t.langButton;
+    }
+
+    // Twitch embed functionality
     let embed;
     let isEmbedInitialized = false;
 
