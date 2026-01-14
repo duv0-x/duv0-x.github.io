@@ -50,107 +50,65 @@
     </p><br>
 </div>
 
-<div class="container social-networks" id="duv0x-tv-section">
-    <h3>> TV</h3>
-    <p id="live-indicator" style="display: none; margin: 5px 0; color: #e06c76; font-size: 8px;">🔴 LIVE NOW</p>
-
-    <div id="twitch-embed"></div>
-    <div id="offline-message" class="offline-placeholder">
-        <p>📺 Channel offline</p>
-        <p style="font-size: 8px; margin-top: 5px;">Come back soon to watch the stream</p>
-    </div>
-
-    <div class="stream-schedule">
-        <h4>Streaming Schedule:</h4>
-        <p>
-            📅 Monday - Friday<br>
-            🕐 17:30 - 20:00 COT (UTC-05:00)<br><br>
-            📅 Saturdays<br>
-            🕐 09:00 - 13:00 COT (UTC-05:00)
-        </p>
+<div class="container social-networks" id="starred-repos-section">
+    <h3>> Starred Repositories</h3>
+    <div id="starred-repos-container">
+        <p style="font-size: 8px;">Loading starred repositories...</p>
     </div>
 </div>
 
 <div class="container social-networks">
     <h3>> Links</h3>
-    <p>💼 <a href="https://www.linkedin.com/in/duvanballen" style="color: #e06c76;">LinkedIn</a> 🧑🏻‍💻 <a href="https://github.com/duv0-x" style="color: #98d1cc;">GitHub</a> 📺 <a href="https://twitch.tv/duv0_x" style="color: #98d1cc;">Twitch</a></p><br>
+    <p>💼 <a href="https://www.linkedin.com/in/duvanballen" style="color: #e06c76;">LinkedIn</a> 🧑🏻‍💻 <a href="https://github.com/duv0-x" style="color: #98d1cc;">GitHub</a></p><br>
 </div>
 
 <footer>
     <p>Build with ☕ from Colombia 🇨🇴</p>
 </footer>
 
-<script src="https://embed.twitch.tv/embed/v1.js"></script>
 <script>
-    let embed;
-    let isEmbedInitialized = false;
-
-    // Inicializar el reproductor de Twitch
-    function initTwitchEmbed() {
-        if (!isEmbedInitialized) {
-            embed = new Twitch.Embed('twitch-embed', {
-                width: '100%',
-                height: 280,
-                channel: 'duv0_x',
-                layout: 'video',
-                autoplay: false,
-                parent: ['duv0-x.github.io', 'localhost']
-            });
-            isEmbedInitialized = true;
-            console.log('✅ Twitch embed initialized');
-        }
-    }
-
-    // Verificar si duv0_x está en vivo
-    async function checkIfLive() {
+    // Cargar repositorios con estrella desde GitHub
+    async function loadStarredRepos() {
         try {
-            console.log('🔍 Checking stream status...');
-            const response = await fetch('https://decapi.me/twitch/uptime/duv0_x');
-            const uptime = await response.text();
-            console.log('📡 API Response:', uptime);
+            const response = await fetch('https://api.github.com/users/duv0-x/starred?per_page=6&sort=updated');
+            const repos = await response.json();
 
-            const liveIndicator = document.getElementById('live-indicator');
-            const twitchEmbed = document.getElementById('twitch-embed');
-            const offlineMessage = document.getElementById('offline-message');
+            const container = document.getElementById('starred-repos-container');
 
-            // Mejorar detección: verificar que la respuesta sea un tiempo válido
-            // La API devuelve el tiempo de stream (ej: "2 hours, 30 minutes") cuando está live
-            // o "duv0_x is offline" cuando no está transmitiendo
-            const isLive = uptime &&
-                          !uptime.toLowerCase().includes('offline') &&
-                          !uptime.toLowerCase().includes('error') &&
-                          uptime.trim() !== '';
-
-            console.log('🎥 Stream status:', isLive ? 'LIVE' : 'OFFLINE');
-
-            if (isLive) {
-                liveIndicator.style.display = 'block';
-                twitchEmbed.style.display = 'block';
-                offlineMessage.style.display = 'none';
-
-                // Inicializar embed solo si está en vivo
-                if (!isEmbedInitialized) {
-                    initTwitchEmbed();
-                }
-            } else {
-                liveIndicator.style.display = 'none';
-                twitchEmbed.style.display = 'none';
-                offlineMessage.style.display = 'block';
+            if (repos.length === 0) {
+                container.innerHTML = '<p style="font-size: 8px;">No starred repositories found.</p>';
+                return;
             }
+
+            // Crear lista de repositorios
+            let reposHTML = '<div style="text-align: left; font-size: 8px;">';
+            repos.forEach(repo => {
+                const repoName = repo.full_name;
+                const repoUrl = repo.html_url;
+                const repoDesc = repo.description || 'No description';
+                const language = repo.language || 'Unknown';
+                const stars = repo.stargazers_count;
+
+                reposHTML += `
+                    <div style="margin-bottom: 10px; padding: 5px; border-left: 2px solid #27a888;">
+                        <a href="${repoUrl}" style="color: #98d1cc; font-weight: bold;" target="_blank">⭐ ${repoName}</a><br>
+                        <span style="color: #98d1cc; opacity: 0.8;">${repoDesc.substring(0, 80)}${repoDesc.length > 80 ? '...' : ''}</span><br>
+                        <span style="color: #27a888;">🔤 ${language} | ⭐ ${stars}</span>
+                    </div>
+                `;
+            });
+            reposHTML += '</div>';
+
+            container.innerHTML = reposHTML;
         } catch (error) {
-            console.error('❌ Error checking stream status:', error);
-            // En caso de error, mostrar mensaje offline
-            document.getElementById('live-indicator').style.display = 'none';
-            document.getElementById('twitch-embed').style.display = 'none';
-            document.getElementById('offline-message').style.display = 'block';
+            console.error('Error loading starred repositories:', error);
+            document.getElementById('starred-repos-container').innerHTML =
+                '<p style="font-size: 8px; color: #e06c76;">Error loading repositories.</p>';
         }
     }
 
-    // Verificar al cargar la página
-    checkIfLive();
-
-    // Verificar cada 15 segundos para detección casi inmediata
-    setInterval(checkIfLive, 15000);
+    // Cargar al iniciar la página
+    loadStarredRepos();
 </script>
 </body>
 </html>
