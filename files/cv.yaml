@@ -24,7 +24,7 @@ cv:
         end_date: present
         location: Medellín, Colombia (Remote)
         highlights:
-          - Lead a team of Lulo X DevOps/SRE engineers managing infrastructure for a digital banking crypto currencies platform serving more than 100.000 customers
+          - Lead a team of 4 DevOps/SRE engineers managing infrastructure for a digital banking crypto currencies platform (Lulo X) serving more than 100.000 customers
           - Design, build, and maintain auto-scaling infrastructure on AWS leveraging EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, and Elasticache
           - Achieved PENDIENTE POR ESCRIBIR% reduction in infrastructure costs through optimization of AWS resources and right-sizing initiatives
           - Manage 100% of infrastructure as code using Terraform, versioned on GitHub with PENDIENTE POR ESCRIBIR repositories
