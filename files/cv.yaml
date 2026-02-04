@@ -1,0 +1,253 @@
+cv:
+  name: Duván Ballén Rodríguez
+  label: SRE & DevOps Engineer
+  location: Medellín, Colombia
+  email: duvan.ballen@gmail.com
+  phone: +57 317 765 0612
+  website: https://duv0-x.github.io
+  social_networks:
+    - network: LinkedIn
+      username: duvanballen
+    - network: GitHub
+      username: duv0-x
+  
+  sections:
+    summary:
+      - DevOps and Site Reliability Engineer with 18+ years of hands-on experience in GNU/Linux systems, network infrastructure, automation, and cloud architecture. Specialized in building and maintaining self-scaling, resilient infrastructures on AWS.
+      - Expert in modern cloud-native stacks including Kubernetes, Terraform, and comprehensive observability platforms (X-Ray, NewRelic, Prometheus, Grafana, CloudWatch). Proven track record designing and implementing CI/CD pipelines with Jenkins, CircleCI, and GitHub Actions.
+      - Experienced managing mission-critical production infrastructure with deep expertise in traceability, observability, and designing highly available architectures. Team leader focused on problem-solving through code, metrics-driven decisions, and operational excellence.
+    
+    experience:
+      - company: Lulo Bank S.A.
+        position: SRE/DevOps Engineer & Team Lead
+        start_date: 2021-05
+        end_date: present
+        location: Medellín, Colombia
+        highlights:
+          - Lead a team of PENDIENTE POR ESCRIBIR DevOps/SRE engineers managing infrastructure for a digital banking platform serving PENDIENTE POR ESCRIBIR customers
+          - Design, build, and maintain auto-scaling infrastructure on AWS leveraging EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, and Elasticache
+          - Achieved PENDIENTE POR ESCRIBIR% reduction in infrastructure costs through optimization of AWS resources and right-sizing initiatives
+          - Manage 100% of infrastructure as code using Terraform, versioned on GitHub with PENDIENTE POR ESCRIBIR repositories
+          - Implement comprehensive observability stack reducing mean time to resolution (MTTR) by PENDIENTE POR ESCRIBIR% using X-Ray, NewRelic, Prometheus, Grafana, and CloudWatch
+          - Automate deployment pipelines with CircleCI, enabling PENDIENTE POR ESCRIBIR deployments per day with PENDIENTE POR ESCRIBIR% success rate
+          - Led SOC2 Type II compliance infrastructure implementation ensuring 99.9% uptime SLA
+      
+      - company: Alkanza S.A.S.
+        position: DevOps Engineer
+        start_date: 2018-01
+        end_date: 2019-12
+        location: Colombia
+        highlights:
+          - Designed and deployed Kubernetes clusters managing PENDIENTE POR ESCRIBIR containerized microservices across PENDIENTE POR ESCRIBIR environments
+          - Built auto-scaling cloud infrastructure on AWS reducing manual intervention by PENDIENTE POR ESCRIBIR%
+          - Implemented Infrastructure as Code using CloudFormation, managing PENDIENTE POR ESCRIBIR AWS resources
+          - Configured Jenkins CI/CD pipelines automating PENDIENTE POR ESCRIBIR deployments monthly and reducing deployment time by PENDIENTE POR ESCRIBIR%
+          - Created automated testing jobs reducing production bugs by PENDIENTE POR ESCRIBIR%
+      
+      - company: Zürich de Occidente S.A.
+        position: Infrastructure Manager / Infrastructure Director
+        start_date: 2015-01
+        end_date: 2018-12
+        location: Colombia
+        highlights:
+          - Promoted from Infrastructure Manager to Director, managing PENDIENTE POR ESCRIBIR-person infrastructure team
+          - Administered PENDIENTE POR ESCRIBIR production servers across CentOS, Red Hat, Ubuntu Server, and Debian distributions
+          - Managed JBoss, Glassfish, and Payara application server clusters supporting PENDIENTE POR ESCRIBIR concurrent users
+          - Maintained critical services including Nginx, Apache, MySQL, PostgreSQL, Zimbra, achieving PENDIENTE POR ESCRIBIR% uptime
+          - Administered VMware vSphere virtualization infrastructure with PENDIENTE POR ESCRIBIR VMs
+          - Migrated PENDIENTE POR ESCRIBIR services to Azure and AWS, reducing operational costs by PENDIENTE POR ESCRIBIR%
+          - Architected and deployed Docker Swarm clusters, containerizing PENDIENTE POR ESCRIBIR applications
+      
+      - company: Ingenews S.A.S.
+        position: Infrastructure Engineer and Development
+        start_date: 2014-01
+        end_date: 2015-12
+        location: Colombia
+        highlights:
+          - Administered GNU/Linux infrastructure across CentOS, Red Hat, Ubuntu Server, Debian, Endian, and PfSense systems
+          - Developed shell scripts automating PENDIENTE POR ESCRIBIR daily operational tasks, reducing manual work by PENDIENTE POR ESCRIBIR hours/week
+          - Designed backup solutions protecting PENDIENTE POR ESCRIBIR TB of critical data with PENDIENTE POR ESCRIBIR recovery time objective (RTO)
+          - Researched and prototyped PENDIENTE POR ESCRIBIR custom technologies for business process optimization
+      
+      - company: OpenBox Ltda.
+        position: Infrastructure Engineer
+        start_date: 2013-01
+        end_date: 2014-12
+        location: Colombia
+        highlights:
+          - Deployed and maintained PENDIENTE POR ESCRIBIR virtualized environments using VMware and KVM
+          - Configured security infrastructure (pfSense, Endian, IPcop, SonicWall) protecting PENDIENTE POR ESCRIBIR endpoints
+          - Implemented email platforms (Zimbra, Postfix, Amavis, Dovecot) serving PENDIENTE POR ESCRIBIR users
+          - Administered Elastix telephony platform supporting PENDIENTE POR ESCRIBIR concurrent calls
+          - Automated backup procedures reducing recovery time by PENDIENTE POR ESCRIBIR%
+      
+      - company: Ximil Technologies SAS.
+        position: Developer and Systems Administrator
+        start_date: 2012-01
+        end_date: 2013-12
+        location: Colombia
+        highlights:
+          - Managed infrastructure across CentOS, Red Hat, and Ubuntu servers supporting PENDIENTE POR ESCRIBIR applications
+          - Developed PHP5/CSS web portals on Joomla CMS for DIMAR (Colombian Maritime Authority)
+          - Deployed enterprise email infrastructure using Zimbra for Colombian National Navy serving PENDIENTE POR ESCRIBIR users
+          - Created comprehensive installation manuals and technical documentation for PENDIENTE POR ESCRIBIR platforms
+          - Automated backup processes protecting PENDIENTE POR ESCRIBIR GB of critical data
+      
+      - company: Shortcut Solutions SAS.
+        position: Developer and Systems Administrator
+        start_date: 2012-01
+        end_date: 2012-12
+        location: Colombia
+        highlights:
+          - Administered CentOS servers with Parallels Plesk Panel hosting PENDIENTE POR ESCRIBIR websites
+          - Maintained eBD Development Framework supporting PENDIENTE POR ESCRIBIR developers
+          - Implemented high-availability cluster architecture achieving PENDIENTE POR ESCRIBIR% uptime for production web applications
+          - Automated deployment processes reducing deployment time by PENDIENTE POR ESCRIBIR%
+      
+      - company: Document Express
+        position: Developer and Systems Administrator
+        start_date: 2011-01
+        end_date: 2012-12
+        location: Colombia
+        highlights:
+          - Administered core infrastructure services (Web, Firewall, Proxy, DNS) across Ubuntu Server, Debian, Fedora, and CentOS
+          - Deployed PowerFile document management system (Storage, SGD, BPM modules) managing PENDIENTE POR ESCRIBIR documents
+          - Maintained Wiki documentation platform and Bug Tracker serving PENDIENTE POR ESCRIBIR development team members
+          - Automated routine tasks through shell scripting, saving PENDIENTE POR ESCRIBIR hours/week
+      
+      - company: Siscorp de Colombia SAS.
+        position: Developer and Systems Administrator
+        start_date: 2010-01
+        end_date: 2011-12
+        location: Colombia
+        highlights:
+          - Managed GNU/Linux server infrastructure (Web, Firewall, Proxy, DNS, Zimbra) on Fedora and CentOS
+          - Implemented PowerFile document management system for high-profile government projects including Senate, House of Representatives, and Ministry of National Education
+          - Deployed document management solution for Colombian Federation of Municipalities processing PENDIENTE POR ESCRIBIR documents annually
+          - Administered collaboration infrastructure (Wiki, Bug Tracker) supporting PENDIENTE POR ESCRIBIR concurrent users
+      
+      - company: Gekko INS Ltda.
+        position: Systems Administrator
+        start_date: 2008-01
+        end_date: 2010-12
+        location: Colombia
+        highlights:
+          - Administered and maintained PENDIENTE POR ESCRIBIR internet portals using CPANEL
+          - Managed database infrastructure supporting PENDIENTE POR ESCRIBIR concurrent connections
+          - Implemented security measures reducing incidents by PENDIENTE POR ESCRIBIR%
+          - Optimized server resources improving performance by PENDIENTE POR ESCRIBIR%
+    
+    education:
+      - institution: Colombian School of Engineering Julio Garavito
+        area: Electronic Engineering
+        degree: 6 semesters completed
+        start_date: 
+        end_date:
+        location: Bogotá, Colombia
+        highlights:
+          - Completed advanced coursework in systems architecture and electronics
+      
+      - institution: Grancolombiano Polytechnic
+        area: Systems Engineering
+        degree: 4 semesters completed
+        start_date:
+        end_date:
+        location: Colombia
+        highlights:
+          - Strengthened foundation in systems engineering principles
+      
+      - institution: National Open and Distance University (UNAD)
+        area: Philosophy
+        degree: 2 semesters completed
+        start_date:
+        end_date:
+        location: Colombia
+        highlights:
+          - Developed analytical and critical thinking skills
+    
+    certifications:
+      - bullet: Cloud SRE Engineer en AWS
+      - bullet: AWS Solutions Architect – Associate (Cloud Architecture Specialist)
+      - bullet: Programming for Everybody (Getting Started with Python)
+      - bullet: Using Python to Access Web Data
+      - bullet: Python Data Structures
+    
+    skills:
+      - label: Cloud & Infrastructure
+        details: AWS (EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, Elasticache), Azure, VMware vSphere
+      - label: Container Orchestration
+        details: Kubernetes, Docker, Docker Swarm, ECS
+      - label: Infrastructure as Code
+        details: Terraform, CloudFormation
+      - label: CI/CD
+        details: CircleCI, Jenkins, GitHub Actions
+      - label: Monitoring & Observability
+        details: X-Ray, NewRelic, Prometheus, Grafana, CloudWatch
+      - label: Programming & Scripting
+        details: Python, Shell Scripting (Bash)
+      - label: Operating Systems
+        details: GNU/Linux (CentOS, Red Hat, Ubuntu, Debian, Fedora), BSD (PfSense)
+      - label: Version Control & Collaboration
+        details: Git, GitHub
+      - label: Languages
+        details: English (B1), Spanish (Native)
+
+design:
+  theme: sb2nov
+  page:
+    size: us-letter
+    top_margin: 2cm
+    bottom_margin: 2cm
+    left_margin: 2cm
+    right_margin: 2cm
+    show_page_numbering: true
+    show_last_updated_date: true
+  colors:
+    text: rgb(0, 0, 0)
+    name: rgb(0, 0, 0)
+    connections: rgb(0, 0, 0)
+    section_titles: rgb(0, 79, 144)
+    links: rgb(0, 79, 144)
+    last_updated_date_and_page_numbering: rgb(128, 128, 128)
+  text:
+    font_family: New Computer Modern
+    font_size: 10pt
+    leading: 0.6em
+    alignment: justified
+  header:
+    name_font_size: 28pt
+    name_bold: true
+    vertical_space_between_name_and_connections: 0.5cm
+    use_icons_for_connections: true
+  section_titles:
+    type: with-full-line
+    font_size: 1.3em
+    bold: true
+    line_thickness: 0.5pt
+  entries:
+    date_and_location_width: 4.5cm
+  highlights:
+    top_margin: 0.20cm
+    left_margin: 0.4cm
+    vertical_space_between_highlights: 0.20cm
+
+locale:
+  language: en
+  phone_number_format: national
+  date_template: MONTH_ABBREVIATION YEAR
+  abbreviations_for_months:
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+
+rendercv_settings:
+  date: '2025-02-03'
