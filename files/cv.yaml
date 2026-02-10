@@ -23,6 +23,8 @@ cv:
         details: Terraform
       - label: CI/CD
         details: CircleCI, GitHub Actions
+      - label: AI & Automation
+        details: LLM integration, MCP server development, AI agent workflows, prompt engineering
       - label: Monitoring & Observability
         details: X-Ray, NewRelic, Prometheus, Grafana, CloudWatch
       - label: Programming & Scripting
