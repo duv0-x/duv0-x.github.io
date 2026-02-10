@@ -22,7 +22,7 @@ cv:
         location: Bogotá, Colombia (Remote)
         highlights:
           - Lead a team of 3 DevOps engineers, managing infrastructure as code, cloud services for a digital banking and crypto currencies platform (Lulo X) serving more than 200.000 customers
-          - Design, build, and maintain auto-scaling infrastructure on AWS leveraging EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, and Elasticache
+          - Design, build, and maintain auto-scaling infrastructure on AWS leveraging EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, Elasticache, Step Functions, IAM, among others
           - Reduced AWS infrastructure costs by 23% through Kubernetes resource optimization, decreasing microservice memory consumption from 2GB to 750MB and increasing pod density per node
           - Manage 100% of infrastructure as code using Terraform across 100+ version-controlled GitHub and Bitbucket repositories
           - Implement comprehensive observability stack reducing mean time to resolution (MTTR) by 23% using X-Ray and CloudWatch
@@ -159,7 +159,7 @@ cv:
     
     skills:
       - label: Cloud & Infrastructure
-        details: AWS (EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, Elasticache), VMware vSphere
+        details: AWS (EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, Elasticache, Step Functions, IAM, among others), VMware vSphere
       - label: Container Orchestration
         details: Kubernetes, EKS, ECS
       - label: Infrastructure as Code
