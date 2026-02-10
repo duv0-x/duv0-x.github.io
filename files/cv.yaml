@@ -4,33 +4,30 @@ cv:
   location: Medellín, Colombia
   email: duvan.ballen@gmail.com
   phone: +57 317 765 0612
-  website: https://duv0-x.github.io
   social_networks:
     - network: LinkedIn
       username: duvanballen
-    - network: GitHub
-      username: duv0-x
   
   sections:
     summary:
       - DevOps and Cloud Engineer with 18+ years of hands-on experience in GNU/Linux systems, infrastructure, automation, and cloud architecture. Specialized in building and maintaining self-scaling, resilient infrastructures on AWS using modern techlogies and design patterns, including Infrastructure as Code (IaC) with Terraform. Proven track record designing and implementing CI/CD pipelines with CircleCI and GitHub Actions.
-      - Expert in cloud-native and event driven arquitecture stacks such API Gateway, Kubernetes (EKS), EC2, Step Functions, Lambda, SQS, EventBridge, DynamoDB, S3, Cognito, IAM, ElastiCache, and so on. Experience with comprehensive observability stack (X-Ray, NewRelic, CloudWatch, Prometheus and Grafana).
+      - Expert in cloud-native and event-driven arquitecture stacks such API Gateway, Kubernetes (EKS), EC2, Step Functions, Lambda, SQS, EventBridge, DynamoDB, S3, Cognito, IAM, ElastiCache, and so on. Experience with comprehensive observability stack (X-Ray, NewRelic, CloudWatch, Prometheus and Grafana).
       - Experienced managing mission-critical production infrastructure and designing highly available architectures. Team leader focused on problem-solving through code, metrics-driven decisions, and operational excellence.
     
     experience:
       - company: Lulo Bank S.A.
-        position: SRE/DevOps Engineer & Team Lead
+        position: DevOps Engineer, Team Lead and Sr Platform Engineer
         start_date: 2021-05
         end_date: present
-        location: Medellín, Colombia (Remote)
+        location: Bogotá, Colombia (Remote)
         highlights:
-          - Lead a team of 4 DevOps/SRE engineers managing infrastructure for a digital banking crypto currencies platform (Lulo X) serving more than 100.000 customers
+          - Lead a team of 3 DevOps engineers, managing infrastructure as code, cloud services for a digital banking and crypto currencies platform (Lulo X) serving more than 200.000 customers
           - Design, build, and maintain auto-scaling infrastructure on AWS leveraging EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, and Elasticache
-          - Achieved PENDIENTE POR ESCRIBIR% reduction in infrastructure costs through optimization of AWS resources and right-sizing initiatives
-          - Manage 100% of infrastructure as code using Terraform, versioned on GitHub with PENDIENTE POR ESCRIBIR repositories
-          - Implement comprehensive observability stack reducing mean time to resolution (MTTR) by PENDIENTE POR ESCRIBIR% using X-Ray, NewRelic, Prometheus, Grafana, and CloudWatch
-          - Automate deployment pipelines with CircleCI, enabling PENDIENTE POR ESCRIBIR deployments per day with PENDIENTE POR ESCRIBIR% success rate
-          - Led SOC2 Type II compliance infrastructure implementation ensuring 99.9% uptime SLA
+          - Reduced AWS infrastructure costs by 23% through Kubernetes resource optimization, decreasing microservice memory consumption from 2GB to 750MB and increasing pod density per node
+          - Manage 100% of infrastructure as code using Terraform across 100+ version-controlled GitHub and Bitbucket repositories
+          - Implement comprehensive observability stack reducing mean time to resolution (MTTR) by 23% using X-Ray and CloudWatch
+          - Automate deployment and testing pipelines with CircleCI, enabling 100+ deployments per day with 96% success rate
+          - Maintain SOC2 Type II compliance across all production infrastructure with 99% uptime SLA
       
       - company: Alkanza S.A.S.
         position: DevOps Engineer
@@ -38,11 +35,11 @@ cv:
         end_date: 2019-12
         location: Bogotá, Colombia
         highlights:
-          - Designed and deployed Kubernetes clusters managing PENDIENTE POR ESCRIBIR containerized microservices across PENDIENTE POR ESCRIBIR environments
-          - Built auto-scaling cloud infrastructure on AWS reducing manual intervention by PENDIENTE POR ESCRIBIR%
-          - Implemented Infrastructure as Code using CloudFormation, managing PENDIENTE POR ESCRIBIR AWS resources
-          - Configured Jenkins CI/CD pipelines automating PENDIENTE POR ESCRIBIR deployments monthly and reducing deployment time by PENDIENTE POR ESCRIBIR%
-          - Created automated testing jobs reducing production bugs by PENDIENTE POR ESCRIBIR%
+          - Designed and deployed Kubernetes clusters managing 20+ containerized microservices across 5 environments
+          - Built auto-scaling cloud infrastructure on AWS using AWS lambdas
+          - Implemented Infrastructure as Code using CloudFormation
+          - Configured Jenkins CI/CD pipelines automating deployments and reducing deployment time
+          - Built Jenkins CI/CD pipelines with automated testing, reducing manual QA time
       
       - company: Zürich de Occidente S.A.
         position: Infrastructure Manager / Infrastructure Director
@@ -50,13 +47,13 @@ cv:
         end_date: 2018-12
         location: Bogotá, Colombia
         highlights:
-          - Promoted from Infrastructure Manager to Director, managing PENDIENTE POR ESCRIBIR-person infrastructure team
-          - Administered PENDIENTE POR ESCRIBIR production servers across CentOS, Red Hat, Ubuntu Server, and Debian distributions
-          - Managed JBoss, Glassfish, and Payara application server clusters supporting PENDIENTE POR ESCRIBIR concurrent users
-          - Maintained critical services including Nginx, Apache, MySQL, PostgreSQL, Zimbra, achieving PENDIENTE POR ESCRIBIR% uptime
-          - Administered VMware vSphere virtualization infrastructure with PENDIENTE POR ESCRIBIR VMs
-          - Migrated PENDIENTE POR ESCRIBIR services to Azure and AWS, reducing operational costs by PENDIENTE POR ESCRIBIR%
-          - Architected and deployed Docker Swarm clusters, containerizing PENDIENTE POR ESCRIBIR applications
+          - Promoted from Infrastructure Manager to Director, managing five-person infrastructure team
+          - Administered 50+ production servers across CentOS, Red Hat, Ubuntu and Debian
+          - Managed JBoss, Glassfish, and Payara application server clusters supporting 50+ concurrent users per customer
+          - Maintained critical services like Nginx, Apache, MySQL, PostgreSQL, Zimbra
+          - Administered VMware vSphere virtualization infrastructure with 50+ VMs
+          - Migrated services to Azure and AWS, reducing operational costs
+          - Architected and deployed Docker Swarm clusters for containerized applications
       
       - company: Ingenews S.A.S.
         position: Infrastructure Engineer and Development
@@ -64,10 +61,10 @@ cv:
         end_date: 2015-12
         location: Bogotá, Colombia
         highlights:
-          - Administered GNU/Linux infrastructure across CentOS, Red Hat, Ubuntu Server, Debian, Endian, and PfSense systems
-          - Developed shell scripts automating PENDIENTE POR ESCRIBIR daily operational tasks, reducing manual work by PENDIENTE POR ESCRIBIR hours/week
-          - Designed backup solutions protecting PENDIENTE POR ESCRIBIR TB of critical data with PENDIENTE POR ESCRIBIR recovery time objective (RTO)
-          - Researched and prototyped PENDIENTE POR ESCRIBIR custom technologies for business process optimization
+          - Administered multi-distribution infrastructure including CentOS, Red Hat, Ubuntu, Debian, Endian firewalls, and PfSense (BSD)
+          - Developed shell scripts automating daily operational tasks and reducing manual work
+          - Designed backup solutions protecting 150+ TB of critical data
+          - Implemented monitoring solutions using Nagios and Zabbix
       
       - company: OpenBox Ltda.
         position: Infrastructure Engineer
@@ -75,11 +72,10 @@ cv:
         end_date: 2014-12
         location: Bogotá, Colombia
         highlights:
-          - Deployed and maintained PENDIENTE POR ESCRIBIR virtualized environments using VMware and KVM
-          - Configured security infrastructure (pfSense, Endian, IPcop, SonicWall) protecting PENDIENTE POR ESCRIBIR endpoints
-          - Implemented email platforms (Zimbra, Postfix, Amavis, Dovecot) serving PENDIENTE POR ESCRIBIR users
-          - Administered Elastix telephony platform supporting PENDIENTE POR ESCRIBIR concurrent calls
-          - Automated backup procedures reducing recovery time by PENDIENTE POR ESCRIBIR%
+          - Deployed and maintained virtualized environments using VMware and KVM
+          - Configured security infrastructure (pfSense, Endian, IPcop, SonicWall)
+          - Implemented email platform (Zimbra, Postfix, Amavis, Dovecot) serving 300+ users
+          - Automated backup procedures reducing recovery time
       
       - company: Ximil Technologies SAS.
         position: Developer and Systems Administrator
@@ -87,11 +83,11 @@ cv:
         end_date: 2013-12
         location: Bogotá, Colombia
         highlights:
-          - Managed infrastructure across CentOS, Red Hat, and Ubuntu servers supporting PENDIENTE POR ESCRIBIR applications
-          - Developed PHP5/CSS web portals on Joomla CMS for DIMAR (Colombian Maritime Authority)
-          - Deployed enterprise email infrastructure using Zimbra for Colombian National Navy serving PENDIENTE POR ESCRIBIR users
-          - Created comprehensive installation manuals and technical documentation for PENDIENTE POR ESCRIBIR platforms
-          - Automated backup processes protecting PENDIENTE POR ESCRIBIR GB of critical data
+          - Managed infrastructure across CentOS, Red Hat and Ubuntu
+          - Developed PHP5/CSS web portal on Joomla CMS for DIMAR (Colombian Maritime Authority)
+          - Deployed email infrastructure using Zimbra for Colombian National Navy serving 500+ users
+          - Created comprehensive installation manuals and technical documentation
+          - Automated backup processes protecting 200+ TB of critical data
       
       - company: Shortcut Solutions SAS.
         position: Developer and Systems Administrator
@@ -99,10 +95,10 @@ cv:
         end_date: 2012-12
         location: Bogotá, Colombia
         highlights:
-          - Administered CentOS servers with Parallels Plesk Panel hosting PENDIENTE POR ESCRIBIR websites
-          - Maintained eBD Development Framework supporting PENDIENTE POR ESCRIBIR developers
-          - Implemented high-availability cluster architecture achieving PENDIENTE POR ESCRIBIR% uptime for production web applications
-          - Automated deployment processes reducing deployment time by PENDIENTE POR ESCRIBIR%
+          - Administered CentOS servers with Parallels Plesk Panel hosting 10+ websites
+          - Maintained eBD Development Framework supporting 5 developers
+          - Deployed high-availability apache cluster reducing production downtime
+          - Built digital signage solution using open-source technologies, eliminating proprietary software licensing fees
       
       - company: Document Express
         position: Developer and Systems Administrator
@@ -110,10 +106,10 @@ cv:
         end_date: 2012-12
         location: Bogotá, Colombia
         highlights:
-          - Administered core infrastructure services (Web, Firewall, Proxy, DNS) across Ubuntu Server, Debian, Fedora, and CentOS
-          - Deployed PowerFile document management system (Storage, SGD, BPM modules) managing PENDIENTE POR ESCRIBIR documents
-          - Maintained Wiki documentation platform and Bug Tracker serving PENDIENTE POR ESCRIBIR development team members
-          - Automated routine tasks through shell scripting, saving PENDIENTE POR ESCRIBIR hours/week
+          - Administered core infrastructure services (Web, Firewall, HTTP Proxy and DNS) across Ubuntu and CentOS
+          - Deployed PowerFile document management system (Storage, SGD, BPM modules) managing 5000+ documents
+          - Maintained Wiki documentation platform and Bug Tracker serving 10+ development team members
+          - Automated routine tasks through shell scripting
       
       - company: Siscorp de Colombia SAS.
         position: Developer and Systems Administrator
@@ -123,19 +119,8 @@ cv:
         highlights:
           - Managed GNU/Linux server infrastructure (Web, Firewall, Proxy, DNS, Zimbra) on Fedora and CentOS
           - Implemented PowerFile document management system for high-profile government projects including Senate, House of Representatives, and Ministry of National Education
-          - Deployed document management solution for Colombian Federation of Municipalities processing PENDIENTE POR ESCRIBIR documents annually
-          - Administered collaboration infrastructure (Wiki, Bug Tracker) supporting PENDIENTE POR ESCRIBIR concurrent users
-      
-      - company: Gekko INS Ltda.
-        position: Systems Administrator
-        start_date: 2008-01
-        end_date: 2010-12
-        location: Bogotá, Colombia
-        highlights:
-          - Administered and maintained PENDIENTE POR ESCRIBIR internet portals using CPANEL
-          - Managed database infrastructure supporting PENDIENTE POR ESCRIBIR concurrent connections
-          - Implemented security measures reducing incidents by PENDIENTE POR ESCRIBIR%
-          - Optimized server resources improving performance by PENDIENTE POR ESCRIBIR%
+          - Deployed document management solution for Colombian Federation of Municipalities 
+          - Administered collaboration infrastructure (Wiki, Bug Tracker)
     
     education:
       - institution: Colombian School of Engineering Julio Garavito
@@ -174,21 +159,21 @@ cv:
     
     skills:
       - label: Cloud & Infrastructure
-        details: AWS (EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, Elasticache), Azure, VMware vSphere
+        details: AWS (EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, Elasticache), GCP, VMware vSphere
       - label: Container Orchestration
-        details: Kubernetes, Docker, Docker Swarm, ECS
+        details: Kubernetes, EKS, ECS
       - label: Infrastructure as Code
-        details: Terraform, CloudFormation
+        details: Terraform
       - label: CI/CD
-        details: CircleCI, Jenkins, GitHub Actions
+        details: CircleCI, GitHub Actions
       - label: Monitoring & Observability
         details: X-Ray, NewRelic, Prometheus, Grafana, CloudWatch
       - label: Programming & Scripting
         details: Python, Shell Scripting (Bash)
       - label: Operating Systems
-        details: GNU/Linux (CentOS, Red Hat, Ubuntu, Debian, Fedora), BSD (PfSense)
+        details: GNU/Linux, BSD
       - label: Version Control & Collaboration
-        details: Git, GitHub
+        details: Git, GitHub, Bitbucket
       - label: Languages
         details: English (B1), Spanish (Native)
 
