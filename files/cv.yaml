@@ -151,11 +151,11 @@ cv:
           - Developed analytical and critical thinking skills
     
     certifications:
-      - bullet: Cloud SRE Engineer en AWS
-      - bullet: AWS Solutions Architect – Associate (Cloud Architecture Specialist)
-      - bullet: Programming for Everybody (Getting Started with Python)
-      - bullet: Using Python to Access Web Data
-      - bullet: Python Data Structures
+      - bullet: "[Cloud SRE Engineer en AWS](https://www.credential.net/572ddbbb-f45a-4e1d-b8dd-eed9d99abdc7#acc.Zuk18Awx)"
+      - bullet: "[AWS Solutions Architect – Associate (Cloud Architecture Specialist)](https://plataforma.bootcamp.institute/pluginfile.php/1/tool_certificate/issues/1709305690/6054265803DB.pdf)"
+      - bullet: "[Programming for Everybody (Getting Started with Python)](https://www.coursera.org/account/accomplishments/verify/8JK85FK91159)"
+      - bullet: "[Using Python to Access Web Data](https://www.coursera.org/account/accomplishments/verify/TFXR3DIJRPX6)"
+      - bullet: "[Python Data Structures](https://www.coursera.org/account/accomplishments/verify/E3JOFHQ0TY7A)"
     
     skills:
       - label: Cloud & Infrastructure
