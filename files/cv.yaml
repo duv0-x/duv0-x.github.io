@@ -159,7 +159,7 @@ cv:
     
     skills:
       - label: Cloud & Infrastructure
-        details: AWS (EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, Elasticache), GCP, VMware vSphere
+        details: AWS (EKS, ECS, EC2, S3, SQS, EventBridge, Cognito, DynamoDB, Lambda, API Gateway, Elasticache), VMware vSphere
       - label: Container Orchestration
         details: Kubernetes, EKS, ECS
       - label: Infrastructure as Code
