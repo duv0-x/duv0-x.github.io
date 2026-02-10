@@ -1,6 +1,6 @@
 cv:
   name: Duván Ballén Rodríguez
-  label: SRE and Cloud Engineer
+  label: DevOps and Cloud Engineer
   location: Medellín, Colombia
   email: duvan.ballen@gmail.com
   phone: +57 317 765 0612
@@ -35,8 +35,7 @@ cv:
         end_date: 2019-12
         location: Bogotá, Colombia
         highlights:
-          - Designed and deployed Kubernetes clusters managing 20+ containerized microservices across 5 environments
-          - Built auto-scaling cloud infrastructure on AWS using AWS lambdas
+          - Designed and deployed Kubernetes clusters managing 20+ containerized microservices
           - Implemented Infrastructure as Code using CloudFormation
           - Configured Jenkins CI/CD pipelines automating deployments and reducing deployment time
           - Built Jenkins CI/CD pipelines with automated testing, reducing manual QA time
