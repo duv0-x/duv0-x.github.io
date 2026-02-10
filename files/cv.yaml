@@ -10,7 +10,7 @@ cv:
   
   sections:
     summary:
-      - DevOps and Cloud Engineer with 18+ years of hands-on experience in GNU/Linux systems, infrastructure, automation, and cloud architecture. Specialized in building and maintaining self-scaling, resilient infrastructures on AWS using modern techlogies and design patterns, including Infrastructure as Code (IaC) with Terraform. Proven track record designing and implementing CI/CD pipelines with CircleCI and GitHub Actions.
+      - DevOps and Cloud Engineer with 15+ years of hands-on experience in GNU/Linux systems, infrastructure, automation, and cloud architecture. Specialized in building and maintaining self-scaling, resilient infrastructures on AWS using modern techlogies and design patterns, including Infrastructure as Code (IaC) with Terraform. Proven track record designing and implementing CI/CD pipelines with CircleCI and GitHub Actions.
       - Expert in cloud-native and event-driven arquitecture stacks such API Gateway, Kubernetes (EKS), EC2, Step Functions, Lambda, SQS, EventBridge, DynamoDB, S3, Cognito, IAM, ElastiCache, and so on. Experience with comprehensive observability stack (X-Ray, NewRelic, CloudWatch, Prometheus and Grafana).
       - Experienced managing mission-critical production infrastructure and designing highly available architectures. Team leader focused on problem-solving through code, metrics-driven decisions, and operational excellence.
     
