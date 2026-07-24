@@ -271,7 +271,7 @@
             </div>
 
             <div class="pagination" id="pagination">
-                <span class="showing-info" id="showing-info" data-en="Showing 1-5 of 10 posts" data-es="Mostrando 1-5 de 10 entradas">Mostrando 1-5 de 10 entradas</span>
+                <span class="showing-info" id="showing-info" data-en="Showing 1-5 of 10 logs" data-es="Mostrando 1-5 de 10 logs">Mostrando 1-5 de 10 logs</span>
                 <div class="page-controls">
                     <button class="page-btn" id="prev-btn" disabled data-en="&lt; prev" data-es="&lt; ant">&lt; ant</button>
                     <span class="page-info" id="page-info">1 / 2</span>
@@ -345,9 +345,9 @@
             const showingInfo = document.getElementById('showing-info');
             if (showingInfo) {
                 if (lang === 'es') {
-                    showingInfo.textContent = 'Mostrando ' + (start + 1) + '-' + end + ' de ' + cards.length + ' entradas';
+                    showingInfo.textContent = 'Mostrando ' + (start + 1) + '-' + end + ' de ' + cards.length + ' logs';
                 } else {
-                    showingInfo.textContent = 'Showing ' + (start + 1) + '-' + end + ' of ' + cards.length + ' posts';
+                    showingInfo.textContent = 'Showing ' + (start + 1) + '-' + end + ' of ' + cards.length + ' logs';
                 }
             }
         }
@@ -394,9 +394,9 @@
 
             const lang = localStorage.getItem('lang') || 'es';
             if (lang === 'es') {
-                showingInfo.textContent = 'Mostrando ' + (start + 1) + '-' + end + ' de ' + cards.length + ' entradas';
+                showingInfo.textContent = 'Mostrando ' + (start + 1) + '-' + end + ' de ' + cards.length + ' logs';
             } else {
-                showingInfo.textContent = 'Showing ' + (start + 1) + '-' + end + ' of ' + cards.length + ' posts';
+                showingInfo.textContent = 'Showing ' + (start + 1) + '-' + end + ' of ' + cards.length + ' logs';
             }
 
             currentPage = page;
