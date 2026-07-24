@@ -7,8 +7,8 @@ This document provides comprehensive guidance for AI assistants working on the d
 **Type**: Personal Portfolio Website (GitHub Pages)
 **Owner**: Duván Ballén (duv0_x)
 **Tech Stack**: Static HTML/CSS
-**Purpose**: Professional profile and portfolio site showcasing SRE/DevOps expertise
-**Theme**: Retro pixel-art aesthetic with dark color scheme
+**Purpose**: Professional profile and activity log showcasing real daily work across SRE/DevOps, cloud engineering, personal projects, and AI tooling.
+**Theme**: Retro pixel-art / terminal aesthetic with dark color scheme; log entries rendered as terminal lines with `>>` prompt
 
 ## Codebase Structure
 
@@ -68,9 +68,23 @@ The page is divided into semantic containers:
 
 1. **Header** (`<header>`) - Site title/branding
 2. **About Container** (`.about-container`) - Profile image and personal info
-3. **Stats Container** (`.stats`) - GitHub statistics widgets
-4. **Social Networks** (`.social-networks`) - Professional and social links
-5. **Footer** (`<footer>`) - Build credits
+3. **Tech Stack** (`.section` with `.section-title`) - Pixelated pills derived from post hashtags, styled as a terminal package list
+4. **Work Log** (`.section` with `#work-log`) - Terminal-style log entries with pagination (5 per page)
+5. **Links** (`.section` with `.section-title`) - Professional and social links
+6. **Footer** (`<footer>`) - Build credits
+
+### Log Entries
+
+Posts use `.log-entry` containers with:
+- `.log-line` - One terminal line containing:
+  - `.log-prompt` - `>>` prefix in coral accent color
+  - `.log-timestamp` - Date stamp in primary accent color
+  - `.log-message` - Activity description in secondary accent color
+- `.log-tags` - Hashtags in primary accent color
+
+The Work Log uses vanilla JavaScript for pagination: 5 entries per page, with `prev`/`next` buttons.
+
+New posts are added by duplicating an existing `<article class="log-entry">` block inside `#log-entries`. When a new technology hashtag is introduced, add the corresponding `.stack-pill` to the Tech Stack cloud. Remember to keep the total entry count aligned with the pagination logic (`pageSize = 5` in the inline script).
 
 ### Layout Patterns
 - **Flexbox for about section**: `display: flex` with `align-items: center` and `gap: 10px`
@@ -174,13 +188,14 @@ Before committing changes to this **static site**, verify:
 
 ### What NOT to Do
 
-❌ **Don't** add JavaScript unless explicitly requested (this is a pure HTML/CSS site)
+✅ **JavaScript is allowed only for small, self-contained interactions** like pagination; keep it inline and minimal
 ❌ **Don't** create new CSS files - all styles go in `styles.css`
 ❌ **Don't** add build tools, preprocessors, or frameworks
 ❌ **Don't** change the font family without explicit permission
 ❌ **Don't** modify the pixel-art aesthetic (e.g., removing `image-rendering: pixelated`)
 ❌ **Don't** add analytics, tracking, or third-party scripts without permission
 ❌ **Don't** create documentation files (like additional READMEs) unless requested
+❌ **Don't** re-add the GitHub starred repositories section without explicit permission
 
 ## External Dependencies
 
@@ -327,11 +342,17 @@ This indicates:
 3. Maintain the casual, personal tone
 4. Commit: "Update employment status"
 
+**Task: Add a new timeline post**
+1. Read index.html timeline section
+2. Duplicate an existing `<article class="sms-post">` block at the top (most recent first)
+3. Update date, message content, and hashtags
+4. If the post introduces a new technology hashtag, add a corresponding `<span class="stack-pill">` to `.tech-stack`
+5. Commit: "Add work log entry for [date]"
+
 **Task: Add a new social link**
-1. Read index.html (lines 38-43)
-2. Determine if it's "Pro" or "Chill" category
-3. Add with emoji prefix and appropriate color
-4. Commit: "Add [platform] link"
+1. Read index.html (links section)
+2. Add with emoji prefix and appropriate color
+3. Commit: "Add [platform] link"
 
 **Task: Adjust spacing/padding**
 1. Read styles.css
