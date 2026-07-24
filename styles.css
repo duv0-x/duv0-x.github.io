@@ -411,7 +411,7 @@ a:hover {
     color: var(--text-muted);
 }
 
-/* Network section */
+/* Links section */
 .links-section {
     background-color: var(--bg);
     border: 1px solid var(--border);
@@ -420,34 +420,51 @@ a:hover {
     transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
-.links-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
 }
 
-.links-section li {
+.link-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.link-card:hover {
+    background-color: var(--tag-bg);
+    border-color: var(--tag-border);
+    transform: translateY(-2px);
+}
+
+.link-card:hover .link-name {
+    color: var(--tag-text);
+}
+
+.link-icon {
     font-family: "JetBrains Mono", monospace;
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: var(--text-muted);
-}
-
-.links-section li:last-child {
-    margin-bottom: 0;
-}
-
-.links-section a {
-    color: var(--link);
-    border-bottom: 1px solid var(--border);
-}
-
-.links-section a:hover {
-    border-bottom-color: var(--link-hover);
-}
-
-.links-section .prompt {
+    font-size: 12px;
     color: var(--prompt);
+}
+
+.link-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    transition: color 0.15s ease;
+}
+
+.link-handle {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: var(--text-muted);
 }
 
 /* Terminal cursor at the end */
