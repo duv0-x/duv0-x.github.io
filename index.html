@@ -16,8 +16,11 @@
     <a href="#about">cat about.txt</a>
     <a href="#stack">ls stack/</a>
     <a href="#posts">ls posts/</a>
-    <a href="#network">cat network.txt</a>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">[theme]</button>
+    <a href="#links">cat links.txt</a>
+    <div class="nav-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">[theme]</button>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">[en]</button>
+    </div>
 </nav>
 
 <div class="terminal-window">
@@ -34,27 +37,30 @@
     <main class="container">
         <div class="cmd-line">
             <span class="prompt">$</span>
-            <span class="cmd">cat welcome.txt</span>
+            <span class="cmd" data-en="cat welcome.txt" data-es="cat bienvenida.txt">cat welcome.txt</span>
         </div>
 
         <section class="welcome" id="about">
             <h1># duv0_x profile</h1>
-            <p>Every engineering problem tells a story. Here, I share the integrations, guardias, experiments and lessons that shape how I build, how I operate, and how I keep systems running.</p>
+            <p data-en="Every engineering problem tells a story. Here, I share the integrations, on-call shifts, experiments and lessons that shape how I build, how I operate, and how I keep systems running."
+               data-es="Cada problema de ingeniería cuenta una historia. Aquí comparto las integraciones, guardias, experimentos y lecciones que moldean cómo construyo, opero y mantengo sistemas funcionando.">
+                Cada problema de ingeniería cuenta una historia. Aquí comparto las integraciones, guardias, experimentos y lecciones que moldean cómo construyo, opero y mantengo sistemas funcionando.
+            </p>
 
             <div class="about-grid">
                 <img src="images/x-0vub-small.jpg" alt="Duv0-x">
                 <div class="about-info">
-                    <p><span class="info-label">Name:</span> Duván Ballén</p>
-                    <p><span class="info-label">A.k.a:</span> duv0_x</p>
-                    <p><span class="info-label">Role:</span> Sr Platform Engineer @ Lulo Bank</p>
-                    <p><span class="info-label">Focus:</span> DevOps and Cloud Engineering</p>
+                    <p><span class="info-label" data-en="Name:" data-es="Nombre:">Nombre:</span> Duván Ballén</p>
+                    <p><span class="info-label" data-en="A.k.a:" data-es="A.k.a:">A.k.a:</span> duv0_x</p>
+                    <p><span class="info-label" data-en="Role:" data-es="Rol:">Rol:</span> <span data-en="Sr Platform Engineer" data-es="Sr Platform Engineer">Sr Platform Engineer</span></p>
+                    <p><span class="info-label" data-en="Focus:" data-es="Enfoque:">Enfoque:</span> DevOps and Cloud Engineering</p>
                 </div>
             </div>
         </section>
 
         <div class="cmd-line" id="stack">
             <span class="prompt">$</span>
-            <span class="cmd">ls -la ~/stack/</span>
+            <span class="cmd" data-en="ls -la ~/stack/" data-es="ls -la ~/stack/">ls -la ~/stack/</span>
         </div>
 
         <section class="stack-section">
@@ -90,7 +96,7 @@
 
         <div class="cmd-line" id="posts">
             <span class="prompt">$</span>
-            <span class="cmd">ls -l ~/posts | wc -l</span>
+            <span class="cmd" data-en="ls -l ~/posts | wc -l" data-es="ls -l ~/posts | wc -l">ls -l ~/posts | wc -l</span>
         </div>
 
         <section class="posts-section">
@@ -98,9 +104,12 @@
                 <article class="post-card" data-date="2026-07-23">
                     <div class="post-meta">
                         <span class="post-date">07/23/2026</span>
-                        <span class="post-category">Engineering</span>
+                        <span class="post-category" data-en="Engineering" data-es="Ingeniería">Ingeniería</span>
                     </div>
-                    <p class="post-message">Apliqué la cadena completa en stg para el bus de eventos KYB: monolito KYC + layer Python + lambda pdf-generator + reglas cross-account. Cerrado el flujo end-to-end en stg.</p>
+                    <p class="post-message" data-en="Closed the end-to-end flow of an event bus in staging: DynamoDB table + event bus + Python layer + cross-account rules."
+                       data-es="Cerré el flujo end-to-end de un bus de eventos en staging: tabla DynamoDB + bus + layer Python + reglas cross-account.">
+                        Cerré el flujo end-to-end de un bus de eventos en staging: tabla DynamoDB + bus + layer Python + reglas cross-account.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">eventbridge</span>
                         <span class="tag">sqs</span>
@@ -112,9 +121,12 @@
                 <article class="post-card" data-date="2026-07-23">
                     <div class="post-meta">
                         <span class="post-date">07/23/2026</span>
-                        <span class="post-category">Security</span>
+                        <span class="post-category" data-en="Security" data-es="Seguridad">Seguridad</span>
                     </div>
-                    <p class="post-message">Cerré dos tickets de Fluid Attacks sin cambios de código: el remedio ya existía en commits hermanos de limpieza. Lección: revisar git log antes de planear.</p>
+                    <p class="post-message" data-en="Closed two security tickets without code changes: the fix already existed in sibling cleanup commits. Lesson: check git log before planning."
+                       data-es="Cerré dos tickets de seguridad sin cambios de código: el remedio ya existía en commits hermanos de limpieza. Lección: revisar git log antes de planear.">
+                        Cerré dos tickets de seguridad sin cambios de código: el remedio ya existía en commits hermanos de limpieza. Lección: revisar git log antes de planear.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">security</span>
                         <span class="tag">git</span>
@@ -125,9 +137,12 @@
                 <article class="post-card" data-date="2026-07-22">
                     <div class="post-meta">
                         <span class="post-date">07/22/2026</span>
-                        <span class="post-category">Engineering</span>
+                        <span class="post-category" data-en="Engineering" data-es="Ingeniería">Ingeniería</span>
                     </div>
-                    <p class="post-message">Publiqué la layer ingest-events-layer-python en kyc-event-bus-lambdas con replicación. Fix de pipeline: pin de npm@10 porque npm 12 rompía node:20.</p>
+                    <p class="post-message" data-en="Published a Python layer for event processing, with cross-region replication. Pipeline fix: pinned npm@10 because npm 12 broke node:20."
+                       data-es="Publiqué una layer Python para procesamiento de eventos, con replicación entre regiones. Fix de pipeline: pinear npm@10 porque npm 12 rompía node:20.">
+                        Publiqué una layer Python para procesamiento de eventos, con replicación entre regiones. Fix de pipeline: pinear npm@10 porque npm 12 rompía node:20.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">python</span>
                         <span class="tag">lambda</span>
@@ -139,9 +154,12 @@
                 <article class="post-card" data-date="2026-07-21">
                     <div class="post-meta">
                         <span class="post-date">07/21/2026</span>
-                        <span class="post-category">Engineering</span>
+                        <span class="post-category" data-en="Engineering" data-es="Ingeniería">Ingeniería</span>
                     </div>
-                    <p class="post-message">Desplegué lambda-ob-pdf-generator en QA: corregí tests con Mock() y reemplacé la layer Node por ingest-events-layer-python.</p>
+                    <p class="post-message" data-en="Deployed a PDF-generation lambda in QA: fixed tests with Mock() and replaced an incorrect Node layer with the correct Python one."
+                       data-es="Desplegué una lambda generadora de PDFs en QA: corregí tests con Mock() y reemplacé una layer incorrecta por la versión correcta en Python.">
+                        Desplegué una lambda generadora de PDFs en QA: corregí tests con Mock() y reemplacé una layer incorrecta por la versión correcta en Python.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">lambda</span>
                         <span class="tag">sqs</span>
@@ -153,9 +171,12 @@
                 <article class="post-card" data-date="2026-07-20">
                     <div class="post-meta">
                         <span class="post-date">07/20/2026</span>
-                        <span class="post-category">AI Tooling</span>
+                        <span class="post-category" data-en="AI Tooling" data-es="AI Tooling">AI Tooling</span>
                     </div>
-                    <p class="post-message">Fix en la skill implementar: modelos sin benchmark ya no aparecen mezclados con los rankeados; ahora se consulta modelx en vivo.</p>
+                    <p class="post-message" data-en="Fix in the implementar skill: models without benchmarks no longer appear mixed with ranked ones; now modelx is queried live."
+                       data-es="Fix en la skill implementar: modelos sin benchmark ya no aparecen mezclados con los rankeados; ahora se consulta modelx en vivo.">
+                        Fix en la skill implementar: modelos sin benchmark ya no aparecen mezclados con los rankeados; ahora se consulta modelx en vivo.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">ai</span>
                         <span class="tag">ollama</span>
@@ -167,9 +188,12 @@
                 <article class="post-card" data-date="2026-07-19">
                     <div class="post-meta">
                         <span class="post-date">07/19/2026</span>
-                        <span class="post-category">AI Tooling</span>
+                        <span class="post-category" data-en="AI Tooling" data-es="AI Tooling">AI Tooling</span>
                     </div>
-                    <p class="post-message">Integré modelx (catálogo de LLMs) en la skill implementar para seleccionar modelos por coding_elo en vez de tabla estática.</p>
+                    <p class="post-message" data-en="Integrated modelx (LLM catalog) into the implementar skill to select models by coding_elo instead of a static table."
+                       data-es="Integré modelx (catálogo de LLMs) en la skill implementar para seleccionar modelos por coding_elo en vez de tabla estática.">
+                        Integré modelx (catálogo de LLMs) en la skill implementar para seleccionar modelos por coding_elo en vez de tabla estática.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">rust</span>
                         <span class="tag">ai</span>
@@ -181,9 +205,12 @@
                 <article class="post-card" data-date="2026-07-17">
                     <div class="post-meta">
                         <span class="post-date">07/17/2026</span>
-                        <span class="post-category">Engineering</span>
+                        <span class="post-category" data-en="Engineering" data-es="Ingeniería">Ingeniería</span>
                     </div>
-                    <p class="post-message">Implementé la lambda lambda-ob-pdf-generator + SQS trigger en el repo de onboarding. Lección: los placeholders service.zip deben existir para el apply.</p>
+                    <p class="post-message" data-en="Implemented a lambda + SQS trigger for PDF generation. Lesson: service.zip placeholders must exist before apply."
+                       data-es="Implementé una lambda + SQS trigger para generación de PDFs. Lección: los placeholders service.zip deben existir para el apply.">
+                        Implementé una lambda + SQS trigger para generación de PDFs. Lección: los placeholders service.zip deben existir para el apply.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">lambda</span>
                         <span class="tag">sqs</span>
@@ -195,9 +222,12 @@
                 <article class="post-card" data-date="2026-07-16">
                     <div class="post-meta">
                         <span class="post-date">07/16/2026</span>
-                        <span class="post-category">Infrastructure</span>
+                        <span class="post-category" data-en="Infrastructure" data-es="Infraestructura">Infraestructura</span>
                     </div>
-                    <p class="post-message">Ajusté timeout de un job AWS Batch de 1800 a 5400s en prod via Terraform, aislando el cambio con -target.</p>
+                    <p class="post-message" data-en="Adjusted an AWS Batch job timeout from 1800s to 5400s in prod via Terraform, isolating the change with -target."
+                       data-es="Ajusté el timeout de un job AWS Batch de 1800s a 5400s en prod via Terraform, aislando el cambio con -target.">
+                        Ajusté el timeout de un job AWS Batch de 1800s a 5400s en prod via Terraform, aislando el cambio con -target.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">aws-batch</span>
                         <span class="tag">terraform</span>
@@ -208,9 +238,12 @@
                 <article class="post-card" data-date="2026-07-15">
                     <div class="post-meta">
                         <span class="post-date">07/15/2026</span>
-                        <span class="post-category">On-call</span>
+                        <span class="post-category" data-en="On-call" data-es="Guardia">Guardia</span>
                     </div>
-                    <p class="post-message">Restauré trazas Zipkin/OpenSearch de más de 15 días para evidencia SFC: índice de 210M docs, 103.5GB.</p>
+                    <p class="post-message" data-en="Restored Zipkin/OpenSearch traces older than 15 days for regulatory evidence: index of 210M docs, 103.5GB."
+                       data-es="Restauré trazas Zipkin/OpenSearch de más de 15 días para evidencia regulatoria: índice de 210M docs, 103.5GB.">
+                        Restauré trazas Zipkin/OpenSearch de más de 15 días para evidencia regulatoria: índice de 210M docs, 103.5GB.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">opensearch</span>
                         <span class="tag">zipkin</span>
@@ -222,9 +255,12 @@
                 <article class="post-card" data-date="2026-07-13">
                     <div class="post-meta">
                         <span class="post-date">07/13/2026</span>
-                        <span class="post-category">Hardware</span>
+                        <span class="post-category" data-en="Hardware" data-es="Hardware">Hardware</span>
                     </div>
-                    <p class="post-message">Configuré pantalla SPI 3.5" en Raspberry Pi 3 con overlay nativo del kernel piscreen, evitando scripts de terceros.</p>
+                    <p class="post-message" data-en="Configured a 3.5" SPI screen on Raspberry Pi 3 using the native piscreen kernel overlay, avoiding third-party scripts."
+                       data-es="Configuré pantalla SPI 3.5" en Raspberry Pi 3 con overlay nativo del kernel piscreen, evitando scripts de terceros.">
+                        Configuré pantalla SPI 3.5" en Raspberry Pi 3 con overlay nativo del kernel piscreen, evitando scripts de terceros.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">raspberrypi</span>
                         <span class="tag">spi</span>
@@ -235,25 +271,25 @@
             </div>
 
             <div class="pagination" id="pagination">
-                <span class="showing-info" id="showing-info">Showing 1-5 of 10 posts</span>
+                <span class="showing-info" id="showing-info" data-en="Showing 1-5 of 10 posts" data-es="Mostrando 1-5 de 10 entradas">Mostrando 1-5 de 10 entradas</span>
                 <div class="page-controls">
-                    <button class="page-btn" id="prev-btn" disabled>&lt; prev</button>
+                    <button class="page-btn" id="prev-btn" disabled data-en="&lt; prev" data-es="&lt; ant">&lt; ant</button>
                     <span class="page-info" id="page-info">1 / 2</span>
-                    <button class="page-btn" id="next-btn">next &gt;</button>
+                    <button class="page-btn" id="next-btn" data-en="next &gt;" data-es="sig &gt;">sig &gt;</button>
                 </div>
             </div>
         </section>
 
-        <div class="cmd-line" id="network">
+        <div class="cmd-line" id="links">
             <span class="prompt">$</span>
-            <span class="cmd">cat ~/network.txt</span>
+            <span class="cmd" data-en="cat ~/links.txt" data-es="cat ~/links.txt">cat ~/links.txt</span>
         </div>
 
-        <section class="network-section">
-            <h2>## Network</h2>
-            <ul class="network-list">
-                <li><span class="prompt">$</span> <a href="https://www.linkedin.com/in/duvanballen">linkedin --user duvanballen</a></li>
-                <li><span class="prompt">$</span> <a href="https://github.com/duv0-x">gh --user duv0-x</a></li>
+        <section class="links-section">
+            <ul class="links-list">
+                <li><span class="prompt">$</span> <a href="https://www.linkedin.com/in/duvanballen" data-en="linkedin --user duvanballen" data-es="linkedin --user duvanballen">linkedin --user duvanballen</a></li>
+                <li><span class="prompt">$</span> <a href="https://github.com/duv0-x" data-en="gh --user duv0-x" data-es="gh --user duv0-x">gh --user duv0-x</a></li>
+                <li><span class="prompt">$</span> <a href="https://mastodon.social/@duv0_x" data-en="mastodon --user @duv0_x" data-es="mastodon --user @duv0_x">mastodon --user @duv0_x</a></li>
             </ul>
         </section>
 
@@ -268,13 +304,15 @@
     <div class="footer-brand">
         <span class="prompt">$</span> duv0_x
     </div>
-    <p class="footer-copy">Powered by Nokia. Built one log line at a time.</p>
+    <p class="footer-copy" data-en="Powered by Nokia. Built one log line at a time." data-es="Powered by Nokia. Construido una línea de log a la vez.">Powered by Nokia. Construido una línea de log a la vez.</p>
 </footer>
 
 <script>
     (function() {
-        const toggle = document.getElementById('theme-toggle');
         const html = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const langToggle = document.getElementById('lang-toggle');
+
         const storedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
@@ -282,22 +320,60 @@
         function setTheme(theme) {
             html.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
-            toggle.textContent = theme === 'dark' ? '[light]' : '[dark]';
+            themeToggle.textContent = theme === 'dark' ? '[light]' : '[dark]';
         }
 
         setTheme(initialTheme);
 
-        toggle.addEventListener('click', function() {
+        themeToggle.addEventListener('click', function() {
             const current = html.getAttribute('data-theme');
             setTheme(current === 'dark' ? 'light' : 'dark');
         });
-    })();
 
-    (function() {
+        const storedLang = localStorage.getItem('lang');
+        const browserLang = navigator.language.startsWith('es') ? 'es' : 'en';
+        const initialLang = storedLang || browserLang;
+
         const cards = document.querySelectorAll('.post-card');
         const pageSize = 5;
         const totalPages = Math.ceil(cards.length / pageSize);
         let currentPage = 1;
+
+        function updatePaginationLabels(lang) {
+            const start = (currentPage - 1) * pageSize;
+            const end = Math.min(start + pageSize, cards.length);
+            const showingInfo = document.getElementById('showing-info');
+            if (showingInfo) {
+                if (lang === 'es') {
+                    showingInfo.textContent = 'Mostrando ' + (start + 1) + '-' + end + ' de ' + cards.length + ' entradas';
+                } else {
+                    showingInfo.textContent = 'Showing ' + (start + 1) + '-' + end + ' of ' + cards.length + ' posts';
+                }
+            }
+        }
+
+        function setLang(lang) {
+            localStorage.setItem('lang', lang);
+            html.setAttribute('lang', lang);
+            langToggle.textContent = lang === 'es' ? '[en]' : '[es]';
+
+            document.querySelectorAll('[data-en][data-es]').forEach(function(el) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = el.getAttribute('data-' + lang);
+                } else {
+                    el.textContent = el.getAttribute('data-' + lang);
+                }
+            });
+
+            updatePaginationLabels(lang);
+        }
+
+        setLang(initialLang);
+
+        langToggle.addEventListener('click', function() {
+            const current = localStorage.getItem('lang') || 'es';
+            setLang(current === 'es' ? 'en' : 'es');
+        });
 
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
@@ -308,14 +384,21 @@
             const start = (page - 1) * pageSize;
             const end = Math.min(start + pageSize, cards.length);
 
-            cards.forEach((card, index) => {
+            cards.forEach(function(card, index) {
                 card.style.display = (index >= start && index < end) ? 'block' : 'none';
             });
 
             prevBtn.disabled = page === 1;
             nextBtn.disabled = page === totalPages;
             pageInfo.textContent = page + ' / ' + totalPages;
-            showingInfo.textContent = 'Showing ' + (start + 1) + '-' + end + ' of ' + cards.length + ' posts';
+
+            const lang = localStorage.getItem('lang') || 'es';
+            if (lang === 'es') {
+                showingInfo.textContent = 'Mostrando ' + (start + 1) + '-' + end + ' de ' + cards.length + ' entradas';
+            } else {
+                showingInfo.textContent = 'Showing ' + (start + 1) + '-' + end + ' of ' + cards.length + ' posts';
+            }
+
             currentPage = page;
         }
 

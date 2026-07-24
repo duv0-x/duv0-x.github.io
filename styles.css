@@ -103,8 +103,14 @@ a:hover {
     margin-right: 6px;
 }
 
-.theme-toggle {
+.nav-controls {
     margin-left: auto;
+    display: flex;
+    gap: 8px;
+}
+
+.theme-toggle,
+.lang-toggle {
     font-family: "JetBrains Mono", monospace;
     font-size: 13px;
     padding: 4px 10px;
@@ -115,7 +121,8 @@ a:hover {
     cursor: pointer;
 }
 
-.theme-toggle:hover {
+.theme-toggle:hover,
+.lang-toggle:hover {
     background: var(--tag-bg);
     color: var(--tag-text);
     border-color: var(--tag-border);
@@ -404,7 +411,7 @@ a:hover {
 }
 
 /* Network section */
-.network-section {
+.links-section {
     background-color: var(--bg);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -412,40 +419,33 @@ a:hover {
     transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
-.network-section h2 {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 18px;
-    margin: 0 0 16px;
-    color: var(--text);
-}
-
-.network-list {
+.links-section ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.network-list li {
+.links-section li {
     font-family: "JetBrains Mono", monospace;
     font-size: 14px;
     margin-bottom: 10px;
     color: var(--text-muted);
 }
 
-.network-list li:last-child {
+.links-section li:last-child {
     margin-bottom: 0;
 }
 
-.network-list a {
+.links-section a {
     color: var(--link);
     border-bottom: 1px solid var(--border);
 }
 
-.network-list a:hover {
+.links-section a:hover {
     border-bottom-color: var(--link-hover);
 }
 
-.network-list .prompt {
+.links-section .prompt {
     color: var(--prompt);
 }
 
