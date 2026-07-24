@@ -17,249 +17,262 @@
     <a href="#stack">ls stack/</a>
     <a href="#posts">ls posts/</a>
     <a href="#network">cat network.txt</a>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">[theme]</button>
 </nav>
 
-<main class="container">
-    <div class="cmd-line">
-        <span class="prompt">$</span>
-        <span class="cmd">cat welcome.txt</span>
+<div class="terminal-window">
+    <div class="terminal-titlebar">
+        <div class="window-controls">
+            <span class="window-btn close"></span>
+            <span class="window-btn minimize"></span>
+            <span class="window-btn maximize"></span>
+        </div>
+        <div class="window-title">~/</div>
+        <div class="window-spacer"></div>
     </div>
 
-    <section class="welcome" id="about">
-        <h1># duv0_x profile</h1>
-        <p>Every engineering problem tells a story. Here, I share the integrations, guardias, experiments and lessons that shape how I build, how I operate, and how I keep systems running.</p>
+    <main class="container">
+        <div class="cmd-line">
+            <span class="prompt">$</span>
+            <span class="cmd">cat welcome.txt</span>
+        </div>
 
-        <div class="about-grid">
-            <img src="images/x-0vub-small.jpg" alt="Duv0-x">
-            <div class="about-info">
-                <p><span class="info-label">Name:</span> Duván Ballén</p>
-                <p><span class="info-label">A.k.a:</span> duv0_x</p>
-                <p><span class="info-label">Role:</span> Sr Platform Engineer @ Lulo Bank</p>
-                <p><span class="info-label">Focus:</span> DevOps and Cloud Engineering</p>
+        <section class="welcome" id="about">
+            <h1># duv0_x profile</h1>
+            <p>Every engineering problem tells a story. Here, I share the integrations, guardias, experiments and lessons that shape how I build, how I operate, and how I keep systems running.</p>
+
+            <div class="about-grid">
+                <img src="images/x-0vub-small.jpg" alt="Duv0-x">
+                <div class="about-info">
+                    <p><span class="info-label">Name:</span> Duván Ballén</p>
+                    <p><span class="info-label">A.k.a:</span> duv0_x</p>
+                    <p><span class="info-label">Role:</span> Sr Platform Engineer @ Lulo Bank</p>
+                    <p><span class="info-label">Focus:</span> DevOps and Cloud Engineering</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="cmd-line" id="stack">
-        <span class="prompt">$</span>
-        <span class="cmd">ls -la ~/stack/</span>
-    </div>
-
-    <section class="stack-section">
-        <p class="stack-cloud">
-            <span class="stack-pill">eventbridge</span>
-            <span class="stack-pill">sqs</span>
-            <span class="stack-pill">lambda</span>
-            <span class="stack-pill">terraform</span>
-            <span class="stack-pill">python</span>
-            <span class="stack-pill">aws</span>
-            <span class="stack-pill">git</span>
-            <span class="stack-pill">jira</span>
-            <span class="stack-pill">cicd</span>
-            <span class="stack-pill">qa</span>
-            <span class="stack-pill">ai</span>
-            <span class="stack-pill">ollama</span>
-            <span class="stack-pill">claude</span>
-            <span class="stack-pill">opencode</span>
-            <span class="stack-pill">rust</span>
-            <span class="stack-pill">llm</span>
-            <span class="stack-pill">cli</span>
-            <span class="stack-pill">aws-batch</span>
-            <span class="stack-pill">prod</span>
-            <span class="stack-pill">opensearch</span>
-            <span class="stack-pill">zipkin</span>
-            <span class="stack-pill">sfc</span>
-            <span class="stack-pill">raspberrypi</span>
-            <span class="stack-pill">spi</span>
-            <span class="stack-pill">linux</span>
-            <span class="stack-pill">iot</span>
-        </p>
-    </section>
-
-    <div class="cmd-line" id="posts">
-        <span class="prompt">$</span>
-        <span class="cmd">ls -l ~/posts | wc -l</span>
-    </div>
-
-    <section class="posts-section">
-        <div class="posts-list" id="posts-list">
-            <article class="post-card" data-date="2026-07-23">
-                <div class="post-meta">
-                    <span class="post-date">07/23/2026</span>
-                    <span class="post-category">Engineering</span>
-                </div>
-                <h2 class="post-title">Apliqué la cadena completa en stg para el bus de eventos KYB</h2>
-                <p class="post-excerpt">Monolito KYC + layer Python + lambda pdf-generator + reglas cross-account. Cerrado el flujo end-to-end en stg.</p>
-                <div class="post-tags">
-                    <span class="tag">eventbridge</span>
-                    <span class="tag">sqs</span>
-                    <span class="tag">lambda</span>
-                    <span class="tag">terraform</span>
-                </div>
-            </article>
-
-            <article class="post-card" data-date="2026-07-23">
-                <div class="post-meta">
-                    <span class="post-date">07/23/2026</span>
-                    <span class="post-category">Security</span>
-                </div>
-                <h2 class="post-title">Cerré dos tickets de Fluid Attacks sin cambios de código</h2>
-                <p class="post-excerpt">El remedio ya existía en commits hermanos de limpieza. Lección: revisar git log antes de planear.</p>
-                <div class="post-tags">
-                    <span class="tag">security</span>
-                    <span class="tag">git</span>
-                    <span class="tag">jira</span>
-                </div>
-            </article>
-
-            <article class="post-card" data-date="2026-07-22">
-                <div class="post-meta">
-                    <span class="post-date">07/22/2026</span>
-                    <span class="post-category">Engineering</span>
-                </div>
-                <h2 class="post-title">Publiqué la layer ingest-events-layer-python con replicación</h2>
-                <p class="post-excerpt">En kyc-event-bus-lambdas. Fix de pipeline: pin de npm@10 porque npm 12 rompía node:20.</p>
-                <div class="post-tags">
-                    <span class="tag">python</span>
-                    <span class="tag">lambda</span>
-                    <span class="tag">aws</span>
-                    <span class="tag">cicd</span>
-                </div>
-            </article>
-
-            <article class="post-card" data-date="2026-07-21">
-                <div class="post-meta">
-                    <span class="post-date">07/21/2026</span>
-                    <span class="post-category">Engineering</span>
-                </div>
-                <h2 class="post-title">Desplegué lambda-ob-pdf-generator en QA</h2>
-                <p class="post-excerpt">Corregí tests con Mock() y reemplacé la layer Node por ingest-events-layer-python.</p>
-                <div class="post-tags">
-                    <span class="tag">lambda</span>
-                    <span class="tag">sqs</span>
-                    <span class="tag">python</span>
-                    <span class="tag">qa</span>
-                </div>
-            </article>
-
-            <article class="post-card" data-date="2026-07-20">
-                <div class="post-meta">
-                    <span class="post-date">07/20/2026</span>
-                    <span class="post-category">AI Tooling</span>
-                </div>
-                <h2 class="post-title">Fix en la skill implementar con modelx en vivo</h2>
-                <p class="post-excerpt">Modelos sin benchmark ya no aparecen mezclados con los rankeados; ahora se consulta modelx en vivo.</p>
-                <div class="post-tags">
-                    <span class="tag">ai</span>
-                    <span class="tag">ollama</span>
-                    <span class="tag">claude</span>
-                    <span class="tag">opencode</span>
-                </div>
-            </article>
-
-            <article class="post-card" data-date="2026-07-19">
-                <div class="post-meta">
-                    <span class="post-date">07/19/2026</span>
-                    <span class="post-category">AI Tooling</span>
-                </div>
-                <h2 class="post-title">Integré modelx en la skill implementar</h2>
-                <p class="post-excerpt">Catálogo de LLMs para seleccionar modelos por coding_elo en vez de tabla estática.</p>
-                <div class="post-tags">
-                    <span class="tag">rust</span>
-                    <span class="tag">ai</span>
-                    <span class="tag">cli</span>
-                    <span class="tag">llm</span>
-                </div>
-            </article>
-
-            <article class="post-card" data-date="2026-07-17">
-                <div class="post-meta">
-                    <span class="post-date">07/17/2026</span>
-                    <span class="post-category">Engineering</span>
-                </div>
-                <h2 class="post-title">Implementé lambda-ob-pdf-generator + SQS trigger</h2>
-                <p class="post-excerpt">En el repo de onboarding. Lección: los placeholders service.zip deben existir para el apply.</p>
-                <div class="post-tags">
-                    <span class="tag">lambda</span>
-                    <span class="tag">sqs</span>
-                    <span class="tag">terraform</span>
-                    <span class="tag">python</span>
-                </div>
-            </article>
-
-            <article class="post-card" data-date="2026-07-16">
-                <div class="post-meta">
-                    <span class="post-date">07/16/2026</span>
-                    <span class="post-category">Infrastructure</span>
-                </div>
-                <h2 class="post-title">Ajusté timeout de job AWS Batch a 5400s en prod</h2>
-                <p class="post-excerpt">Via Terraform, aislando el cambio con -target para no arrastrar drift ajeno.</p>
-                <div class="post-tags">
-                    <span class="tag">aws-batch</span>
-                    <span class="tag">terraform</span>
-                    <span class="tag">prod</span>
-                </div>
-            </article>
-
-            <article class="post-card" data-date="2026-07-15">
-                <div class="post-meta">
-                    <span class="post-date">07/15/2026</span>
-                    <span class="post-category">On-call</span>
-                </div>
-                <h2 class="post-title">Restauré trazas Zipkin/OpenSearch de más de 15 días</h2>
-                <p class="post-excerpt">Para evidencia SFC: índice de 210M docs, 103.5GB.</p>
-                <div class="post-tags">
-                    <span class="tag">opensearch</span>
-                    <span class="tag">zipkin</span>
-                    <span class="tag">sfc</span>
-                    <span class="tag">aws</span>
-                </div>
-            </article>
-
-            <article class="post-card" data-date="2026-07-13">
-                <div class="post-meta">
-                    <span class="post-date">07/13/2026</span>
-                    <span class="post-category">Hardware</span>
-                </div>
-                <h2 class="post-title">Configuré pantalla SPI 3.5" en Raspberry Pi 3</h2>
-                <p class="post-excerpt">Con overlay nativo del kernel piscreen, evitando scripts de terceros.</p>
-                <div class="post-tags">
-                    <span class="tag">raspberrypi</span>
-                    <span class="tag">spi</span>
-                    <span class="tag">linux</span>
-                    <span class="tag">iot</span>
-                </div>
-            </article>
+        <div class="cmd-line" id="stack">
+            <span class="prompt">$</span>
+            <span class="cmd">ls -la ~/stack/</span>
         </div>
 
-        <div class="pagination" id="pagination">
-            <span class="showing-info" id="showing-info">Showing 1-5 of 10 posts</span>
-            <div class="page-controls">
-                <button class="page-btn" id="prev-btn" disabled>&lt; prev</button>
-                <span class="page-info" id="page-info">1 / 2</span>
-                <button class="page-btn" id="next-btn">next &gt;</button>
+        <section class="stack-section">
+            <p class="stack-cloud">
+                <span class="stack-pill">eventbridge</span>
+                <span class="stack-pill">sqs</span>
+                <span class="stack-pill">lambda</span>
+                <span class="stack-pill">terraform</span>
+                <span class="stack-pill">python</span>
+                <span class="stack-pill">aws</span>
+                <span class="stack-pill">git</span>
+                <span class="stack-pill">jira</span>
+                <span class="stack-pill">cicd</span>
+                <span class="stack-pill">qa</span>
+                <span class="stack-pill">ai</span>
+                <span class="stack-pill">ollama</span>
+                <span class="stack-pill">claude</span>
+                <span class="stack-pill">opencode</span>
+                <span class="stack-pill">rust</span>
+                <span class="stack-pill">llm</span>
+                <span class="stack-pill">cli</span>
+                <span class="stack-pill">aws-batch</span>
+                <span class="stack-pill">prod</span>
+                <span class="stack-pill">opensearch</span>
+                <span class="stack-pill">zipkin</span>
+                <span class="stack-pill">sfc</span>
+                <span class="stack-pill">raspberrypi</span>
+                <span class="stack-pill">spi</span>
+                <span class="stack-pill">linux</span>
+                <span class="stack-pill">iot</span>
+            </p>
+        </section>
+
+        <div class="cmd-line" id="posts">
+            <span class="prompt">$</span>
+            <span class="cmd">ls -l ~/posts | wc -l</span>
+        </div>
+
+        <section class="posts-section">
+            <div class="posts-list" id="posts-list">
+                <article class="post-card" data-date="2026-07-23">
+                    <div class="post-meta">
+                        <span class="post-date">07/23/2026</span>
+                        <span class="post-category">Engineering</span>
+                    </div>
+                    <h2 class="post-title">Apliqué la cadena completa en stg para el bus de eventos KYB</h2>
+                    <p class="post-excerpt">Monolito KYC + layer Python + lambda pdf-generator + reglas cross-account. Cerrado el flujo end-to-end en stg.</p>
+                    <div class="post-tags">
+                        <span class="tag">eventbridge</span>
+                        <span class="tag">sqs</span>
+                        <span class="tag">lambda</span>
+                        <span class="tag">terraform</span>
+                    </div>
+                </article>
+
+                <article class="post-card" data-date="2026-07-23">
+                    <div class="post-meta">
+                        <span class="post-date">07/23/2026</span>
+                        <span class="post-category">Security</span>
+                    </div>
+                    <h2 class="post-title">Cerré dos tickets de Fluid Attacks sin cambios de código</h2>
+                    <p class="post-excerpt">El remedio ya existía en commits hermanos de limpieza. Lección: revisar git log antes de planear.</p>
+                    <div class="post-tags">
+                        <span class="tag">security</span>
+                        <span class="tag">git</span>
+                        <span class="tag">jira</span>
+                    </div>
+                </article>
+
+                <article class="post-card" data-date="2026-07-22">
+                    <div class="post-meta">
+                        <span class="post-date">07/22/2026</span>
+                        <span class="post-category">Engineering</span>
+                    </div>
+                    <h2 class="post-title">Publiqué la layer ingest-events-layer-python con replicación</h2>
+                    <p class="post-excerpt">En kyc-event-bus-lambdas. Fix de pipeline: pin de npm@10 porque npm 12 rompía node:20.</p>
+                    <div class="post-tags">
+                        <span class="tag">python</span>
+                        <span class="tag">lambda</span>
+                        <span class="tag">aws</span>
+                        <span class="tag">cicd</span>
+                    </div>
+                </article>
+
+                <article class="post-card" data-date="2026-07-21">
+                    <div class="post-meta">
+                        <span class="post-date">07/21/2026</span>
+                        <span class="post-category">Engineering</span>
+                    </div>
+                    <h2 class="post-title">Desplegué lambda-ob-pdf-generator en QA</h2>
+                    <p class="post-excerpt">Corregí tests con Mock() y reemplacé la layer Node por ingest-events-layer-python.</p>
+                    <div class="post-tags">
+                        <span class="tag">lambda</span>
+                        <span class="tag">sqs</span>
+                        <span class="tag">python</span>
+                        <span class="tag">qa</span>
+                    </div>
+                </article>
+
+                <article class="post-card" data-date="2026-07-20">
+                    <div class="post-meta">
+                        <span class="post-date">07/20/2026</span>
+                        <span class="post-category">AI Tooling</span>
+                    </div>
+                    <h2 class="post-title">Fix en la skill implementar con modelx en vivo</h2>
+                    <p class="post-excerpt">Modelos sin benchmark ya no aparecen mezclados con los rankeados; ahora se consulta modelx en vivo.</p>
+                    <div class="post-tags">
+                        <span class="tag">ai</span>
+                        <span class="tag">ollama</span>
+                        <span class="tag">claude</span>
+                        <span class="tag">opencode</span>
+                    </div>
+                </article>
+
+                <article class="post-card" data-date="2026-07-19">
+                    <div class="post-meta">
+                        <span class="post-date">07/19/2026</span>
+                        <span class="post-category">AI Tooling</span>
+                    </div>
+                    <h2 class="post-title">Integré modelx en la skill implementar</h2>
+                    <p class="post-excerpt">Catálogo de LLMs para seleccionar modelos por coding_elo en vez de tabla estática.</p>
+                    <div class="post-tags">
+                        <span class="tag">rust</span>
+                        <span class="tag">ai</span>
+                        <span class="tag">cli</span>
+                        <span class="tag">llm</span>
+                    </div>
+                </article>
+
+                <article class="post-card" data-date="2026-07-17">
+                    <div class="post-meta">
+                        <span class="post-date">07/17/2026</span>
+                        <span class="post-category">Engineering</span>
+                    </div>
+                    <h2 class="post-title">Implementé lambda-ob-pdf-generator + SQS trigger</h2>
+                    <p class="post-excerpt">En el repo de onboarding. Lección: los placeholders service.zip deben existir para el apply.</p>
+                    <div class="post-tags">
+                        <span class="tag">lambda</span>
+                        <span class="tag">sqs</span>
+                        <span class="tag">terraform</span>
+                        <span class="tag">python</span>
+                    </div>
+                </article>
+
+                <article class="post-card" data-date="2026-07-16">
+                    <div class="post-meta">
+                        <span class="post-date">07/16/2026</span>
+                        <span class="post-category">Infrastructure</span>
+                    </div>
+                    <h2 class="post-title">Ajusté timeout de job AWS Batch a 5400s en prod</h2>
+                    <p class="post-excerpt">Via Terraform, aislando el cambio con -target para no arrastrar drift ajeno.</p>
+                    <div class="post-tags">
+                        <span class="tag">aws-batch</span>
+                        <span class="tag">terraform</span>
+                        <span class="tag">prod</span>
+                    </div>
+                </article>
+
+                <article class="post-card" data-date="2026-07-15">
+                    <div class="post-meta">
+                        <span class="post-date">07/15/2026</span>
+                        <span class="post-category">On-call</span>
+                    </div>
+                    <h2 class="post-title">Restauré trazas Zipkin/OpenSearch de más de 15 días</h2>
+                    <p class="post-excerpt">Para evidencia SFC: índice de 210M docs, 103.5GB.</p>
+                    <div class="post-tags">
+                        <span class="tag">opensearch</span>
+                        <span class="tag">zipkin</span>
+                        <span class="tag">sfc</span>
+                        <span class="tag">aws</span>
+                    </div>
+                </article>
+
+                <article class="post-card" data-date="2026-07-13">
+                    <div class="post-meta">
+                        <span class="post-date">07/13/2026</span>
+                        <span class="post-category">Hardware</span>
+                    </div>
+                    <h2 class="post-title">Configuré pantalla SPI 3.5" en Raspberry Pi 3</h2>
+                    <p class="post-excerpt">Con overlay nativo del kernel piscreen, evitando scripts de terceros.</p>
+                    <div class="post-tags">
+                        <span class="tag">raspberrypi</span>
+                        <span class="tag">spi</span>
+                        <span class="tag">linux</span>
+                        <span class="tag">iot</span>
+                    </div>
+                </article>
             </div>
+
+            <div class="pagination" id="pagination">
+                <span class="showing-info" id="showing-info">Showing 1-5 of 10 posts</span>
+                <div class="page-controls">
+                    <button class="page-btn" id="prev-btn" disabled>&lt; prev</button>
+                    <span class="page-info" id="page-info">1 / 2</span>
+                    <button class="page-btn" id="next-btn">next &gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="cmd-line" id="network">
+            <span class="prompt">$</span>
+            <span class="cmd">cat ~/network.txt</span>
         </div>
-    </section>
 
-    <div class="cmd-line" id="network">
-        <span class="prompt">$</span>
-        <span class="cmd">cat ~/network.txt</span>
-    </div>
+        <section class="network-section">
+            <h2>## Network</h2>
+            <ul class="network-list">
+                <li><span class="prompt">$</span> <a href="https://www.linkedin.com/in/duvanballen">linkedin --user duvanballen</a></li>
+                <li><span class="prompt">$</span> <a href="https://github.com/duv0-x">gh --user duv0-x</a></li>
+            </ul>
+        </section>
 
-    <section class="network-section">
-        <h2>## Network</h2>
-        <ul class="network-list">
-            <li><span class="prompt">$</span> <a href="https://www.linkedin.com/in/duvanballen">linkedin --user duvanballen</a></li>
-            <li><span class="prompt">$</span> <a href="https://github.com/duv0-x">gh --user duv0-x</a></li>
-        </ul>
-    </section>
-
-    <div class="terminal-cursor">
-        <span class="prompt">$</span>
-        <span class="cursor">█</span>
-    </div>
-</main>
+        <div class="terminal-cursor">
+            <span class="prompt">$</span>
+            <span class="cursor">█</span>
+        </div>
+    </main>
+</div>
 
 <footer>
     <div class="footer-brand">
@@ -269,6 +282,27 @@
 </footer>
 
 <script>
+    (function() {
+        const toggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+
+        function setTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            toggle.textContent = theme === 'dark' ? '[light]' : '[dark]';
+        }
+
+        setTheme(initialTheme);
+
+        toggle.addEventListener('click', function() {
+            const current = html.getAttribute('data-theme');
+            setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+    })();
+
     (function() {
         const cards = document.querySelectorAll('.post-card');
         const pageSize = 5;
