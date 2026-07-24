@@ -75,6 +75,79 @@ header {
     color: #27a888;
 }
 
+/* Tech Stack: pills pixelados */
+.tech-stack {
+    background: #0c1015;
+    padding: 10px;
+}
+
+.stack-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.stack-pill {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid #27a888;
+    color: #98d1cc;
+    background: rgba(39, 168, 136, 0.1);
+    font-size: 8px;
+    line-height: 1.4;
+}
+
+/* Timeline: feed de mensajes estilo Beeper/Nokia */
+.timeline {
+    background: #0c1015;
+    padding: 10px;
+}
+
+.sms-post {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.sms-meta {
+    color: #27a888;
+    font-size: 7px;
+    margin-bottom: 4px;
+    text-align: right;
+}
+
+.sms-bubble {
+    border: 2px solid #27a888;
+    background: rgba(39, 168, 136, 0.08);
+    padding: 10px;
+    position: relative;
+}
+
+.sms-prefix {
+    color: #e06c76;
+    font-size: 9px;
+    margin-right: 6px;
+}
+
+.sms-bubble p {
+    color: #98d1cc;
+    font-size: 9px;
+    margin: 0 0 8px 0;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.sms-bubble p:last-child {
+    margin-bottom: 0;
+}
+
+.sms-tags {
+    color: #27a888;
+    font-size: 7px;
+    margin-top: 8px;
+}
+
 img {
     max-width: 80%;
     border-radius: 10px;
@@ -87,4 +160,27 @@ footer {
     color: #98d1cc;
     font-size: 8px;
     word-wrap: break-word;
+}
+
+@media (max-width: 400px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-container p {
+        max-width: 90%;
+    }
+
+    .stack-cloud {
+        gap: 4px;
+    }
+
+    .stack-pill {
+        font-size: 7px;
+        padding: 3px 6px;
+    }
+
+    .sms-bubble p {
+        font-size: 8px;
+    }
 }
