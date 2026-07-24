@@ -31,7 +31,7 @@
 </div>
 
 <div class="container section">
-    <div class="section-title">[ SECTION :: TECH STACK ]</div>
+    <div class="section-title">Tech Stack</div>
     <div class="terminal-line">$ ls -la ~/stack/</div>
     <p class="stack-cloud">
         <span class="stack-pill">eventbridge</span>
@@ -64,14 +64,14 @@
 </div>
 
 <div class="container section" id="work-log">
-    <div class="section-title">[ SECTION :: WORK LOG ]</div>
+    <div class="section-title">Work Log</div>
     <div class="terminal-line">$ tail -f ~/work.log | paginate --page-size=5</div>
 
     <div class="log-entries" id="log-entries">
         <article class="log-entry" data-date="2026-07-23">
             <div class="log-line">
                 <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-23</span>
+                <span class="log-timestamp">2026-07-23 16:42</span>
                 <span class="log-message">Apliqué la cadena completa en stg para el bus de eventos KYB: monolito KYC + layer Python + lambda pdf-generator + reglas cross-account.</span>
             </div>
             <div class="log-tags">#eventbridge #sqs #lambda #terraform</div>
@@ -80,7 +80,7 @@
         <article class="log-entry" data-date="2026-07-23">
             <div class="log-line">
                 <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-23</span>
+                <span class="log-timestamp">2026-07-23 14:15</span>
                 <span class="log-message">Cerré dos tickets de Fluid Attacks sin cambios de código: el remedio ya existía en commits hermanos de limpieza. Lección: revisar git log antes de planear.</span>
             </div>
             <div class="log-tags">#security #git #jira</div>
@@ -89,7 +89,7 @@
         <article class="log-entry" data-date="2026-07-22">
             <div class="log-line">
                 <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-22</span>
+                <span class="log-timestamp">2026-07-22 11:30</span>
                 <span class="log-message">Publiqué la layer ingest-events-layer-python en kyc-event-bus-lambdas con replicación. Fix de pipeline: pin de npm@10 porque npm 12 rompía node:20.</span>
             </div>
             <div class="log-tags">#python #lambda #aws #cicd</div>
@@ -98,7 +98,7 @@
         <article class="log-entry" data-date="2026-07-21">
             <div class="log-line">
                 <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-21</span>
+                <span class="log-timestamp">2026-07-21 09:50</span>
                 <span class="log-message">Desplegué lambda-ob-pdf-generator en QA: corregí tests con Mock() y reemplacé la layer Node por ingest-events-layer-python.</span>
             </div>
             <div class="log-tags">#lambda #sqs #python #qa</div>
@@ -107,7 +107,7 @@
         <article class="log-entry" data-date="2026-07-20">
             <div class="log-line">
                 <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-20</span>
+                <span class="log-timestamp">2026-07-20 18:05</span>
                 <span class="log-message">Fix en la skill implementar: modelos sin benchmark ya no aparecen mezclados con los rankeados; ahora se consulta modelx en vivo.</span>
             </div>
             <div class="log-tags">#ai #ollama #claude #opencode</div>
@@ -116,7 +116,7 @@
         <article class="log-entry" data-date="2026-07-19">
             <div class="log-line">
                 <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-19</span>
+                <span class="log-timestamp">2026-07-19 21:12</span>
                 <span class="log-message">Integré modelx (catálogo de LLMs) en la skill implementar para seleccionar modelos por coding_elo en vez de tabla estática.</span>
             </div>
             <div class="log-tags">#rust #ai #cli #llm</div>
@@ -125,7 +125,7 @@
         <article class="log-entry" data-date="2026-07-17">
             <div class="log-line">
                 <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-17</span>
+                <span class="log-timestamp">2026-07-17 15:38</span>
                 <span class="log-message">Implementé la lambda lambda-ob-pdf-generator + SQS trigger en el repo de onboarding. Lección: los placeholders service.zip deben existir para el apply.</span>
             </div>
             <div class="log-tags">#lambda #sqs #terraform #python</div>
@@ -134,7 +134,7 @@
         <article class="log-entry" data-date="2026-07-16">
             <div class="log-line">
                 <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-16</span>
+                <span class="log-timestamp">2026-07-16 10:22</span>
                 <span class="log-message">Ajusté timeout de un job AWS Batch de 1800 a 5400s en prod via Terraform, aislando el cambio con -target.</span>
             </div>
             <div class="log-tags">#aws-batch #terraform #prod</div>
@@ -143,7 +143,7 @@
         <article class="log-entry" data-date="2026-07-15">
             <div class="log-line">
                 <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-15</span>
+                <span class="log-timestamp">2026-07-15 13:47</span>
                 <span class="log-message">Restauré trazas Zipkin/OpenSearch de más de 15 días para evidencia SFC: índice de 210M docs, 103.5GB.</span>
             </div>
             <div class="log-tags">#opensearch #zipkin #sfc #aws</div>
@@ -152,7 +152,7 @@
         <article class="log-entry" data-date="2026-07-13">
             <div class="log-line">
                 <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-13</span>
+                <span class="log-timestamp">2026-07-13 19:55</span>
                 <span class="log-message">Configuré pantalla SPI 3.5" en Raspberry Pi 3 con overlay nativo del kernel piscreen, evitando scripts de terceros.</span>
             </div>
             <div class="log-tags">#raspberrypi #spi #linux #iot</div>
@@ -167,7 +167,7 @@
 </div>
 
 <div class="container section">
-    <div class="section-title">[ SECTION :: LINKS ]</div>
+    <div class="section-title">Links</div>
     <div class="terminal-line">$ cat ~/links.txt</div>
     <p class="links-list">
         💼 <a href="https://www.linkedin.com/in/duvanballen" style="color: #e06c76;">LinkedIn</a>
