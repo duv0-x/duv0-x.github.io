@@ -1,90 +1,135 @@
 body {
     font-family: "Press Start 2P", monospace;
-    text-align: center;
+    text-align: left;
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #0c1015;
     font-size: 11px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #98d1cc;
 }
 
+a {
+    color: #27a888;
+    text-decoration: none;
+    border-bottom: 1px dotted #27a888;
+}
+
+a:hover {
+    color: #e06c76;
+    border-bottom-color: #e06c76;
+}
+
+/* Top navigation */
+.top-nav {
+    background-color: #000;
+    color: #98d1cc;
+    padding: 12px 16px;
+    font-size: 9px;
+    border-bottom: 1px solid #27a888;
+    text-align: center;
+}
+
+.top-nav a {
+    margin: 0 10px;
+    color: #98d1cc;
+    border-bottom: none;
+}
+
+.top-nav a:hover {
+    color: #e06c76;
+}
+
+.top-nav .prompt {
+    color: #27a888;
+    margin-right: 4px;
+}
+
+/* Header */
 header {
     background-color: #0c1015;
     color: #27a888;
-    padding: 12px;
+    padding: 24px 16px;
+    text-align: center;
     border-bottom: 2px solid #27a888;
 }
 
+header h1 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+}
+
+header .subtitle {
+    color: #98d1cc;
+    font-size: 9px;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Container */
 .container {
-    max-width: 520px;
-    margin: 6px auto;
-    padding: 10px;
+    max-width: 640px;
+    margin: 16px auto;
+    padding: 16px;
     background: #0c1015;
-    box-shadow: 0 0 12px rgba(39, 168, 136, 0.15);
-    word-wrap: break-word;
-    text-align: left;
     border: 1px solid rgba(39, 168, 136, 0.3);
+    box-shadow: 0 0 16px rgba(39, 168, 136, 0.08);
+    word-wrap: break-word;
 }
 
-/* Profile */
-.about-container {
+/* Command line */
+.cmd-line {
+    margin-bottom: 16px;
+    font-size: 10px;
+}
+
+.prompt {
+    color: #27a888;
+    margin-right: 6px;
+}
+
+.cmd {
+    color: #e06c76;
+}
+
+/* About */
+.about-terminal {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+    align-items: flex-start;
+    gap: 16px;
 }
 
-.about-container img {
+.about-terminal img {
     image-rendering: pixelated;
     border: 4px solid #000;
     padding: 4px;
     background-color: #98d1cc;
-    margin-left: 10px;
     max-width: 130px;
-}
-
-.about-container p {
-    max-width: 55%;
-    text-align: left;
-    margin-bottom: 0;
-    color: #98d1cc;
+    border-radius: 4px;
 }
 
 .about-info {
-    padding: 12px;
-    border: 2px solid #27a888;
-    border-radius: 6px;
-    background-color: rgba(39, 168, 136, 0.08);
+    flex: 1;
+}
+
+.about-info p {
+    margin: 0 0 8px 0;
+    font-size: 9px;
+}
+
+.about-info p:last-child {
+    margin-bottom: 0;
 }
 
 .info-label {
     color: #27a888;
 }
 
-/* Section headers */
-.section-title {
-    color: #000;
-    background-color: #27a888;
-    padding: 8px 10px;
-    margin: -10px -10px 10px -10px;
-    font-size: 9px;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-.terminal-line {
-    color: #27a888;
-    font-size: 8px;
-    margin-bottom: 10px;
-    opacity: 0.8;
-}
-
-/* Tech Stack pills */
+/* Tech Stack */
 .stack-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 6px;
     margin-top: 8px;
 }
 
@@ -93,57 +138,66 @@ header {
     padding: 4px 8px;
     border: 1px solid #27a888;
     color: #98d1cc;
-    background: rgba(39, 168, 136, 0.1);
-    font-size: 7px;
+    background: rgba(39, 168, 136, 0.08);
+    font-size: 8px;
     line-height: 1.4;
 }
 
-/* Work Log */
-.log-entries {
-    margin-top: 10px;
+.stack-pill:hover {
+    background: rgba(39, 168, 136, 0.2);
 }
 
-.log-entry {
-    margin-bottom: 14px;
-    padding-bottom: 14px;
+/* Posts */
+.posts-list {
+    margin-top: 16px;
+}
+
+.post-card {
+    padding: 16px 0;
     border-bottom: 1px dashed rgba(39, 168, 136, 0.3);
 }
 
-.log-entry:last-child {
+.post-card:last-child {
     border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 
-.log-line {
-    display: block;
-    margin-bottom: 6px;
-}
-
-.log-prompt {
-    color: #e06c76;
-    margin-right: 6px;
-    font-size: 9px;
-}
-
-.log-timestamp {
-    color: #27a888;
+.post-meta {
     font-size: 8px;
-    margin-right: 8px;
+    margin-bottom: 8px;
 }
 
-.log-message {
+.post-date {
+    color: #27a888;
+    margin-right: 10px;
+}
+
+.post-category {
+    color: #e06c76;
+}
+
+.post-title {
+    color: #98d1cc;
+    font-size: 11px;
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+}
+
+.post-title::before {
+    content: "## ";
+    color: #27a888;
+}
+
+.post-excerpt {
     color: #98d1cc;
     font-size: 9px;
+    margin: 0 0 10px 0;
+    opacity: 0.85;
     line-height: 1.7;
 }
 
-.log-tags {
+.post-tags {
     color: #27a888;
-    font-size: 7px;
-    margin-top: 6px;
-    margin-left: 22px;
-    opacity: 0.9;
+    font-size: 8px;
 }
 
 /* Pagination */
@@ -151,16 +205,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    margin-top: 16px;
-    padding-top: 12px;
+    gap: 14px;
+    margin-top: 20px;
+    padding-top: 14px;
     border-top: 1px solid rgba(39, 168, 136, 0.3);
 }
 
 .page-btn {
     font-family: "Press Start 2P", monospace;
-    font-size: 8px;
-    padding: 6px 10px;
+    font-size: 9px;
+    padding: 8px 12px;
     background: transparent;
     border: 1px solid #27a888;
     color: #98d1cc;
@@ -168,41 +222,40 @@ header {
 }
 
 .page-btn:hover:not(:disabled) {
-    background: rgba(39, 168, 136, 0.2);
+    background: rgba(39, 168, 136, 0.15);
 }
 
 .page-btn:disabled {
-    border-color: rgba(39, 168, 136, 0.3);
-    color: rgba(152, 209, 204, 0.3);
+    border-color: rgba(39, 168, 136, 0.25);
+    color: rgba(152, 209, 204, 0.35);
     cursor: not-allowed;
 }
 
 .page-info {
     color: #27a888;
-    font-size: 8px;
+    font-size: 9px;
 }
 
 /* Links */
 .links-list {
-    text-align: center;
+    text-align: left;
     font-size: 9px;
     margin-top: 8px;
 }
 
 img {
-    max-width: 80%;
-    border-radius: 10px;
+    max-width: 100%;
 }
 
+/* Footer */
 footer {
-    margin-top: 6px;
-    padding: 12px;
-    background-color: #0c1015;
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #000;
     color: #98d1cc;
     font-size: 8px;
-    word-wrap: break-word;
     text-align: center;
-    border-top: 2px solid #27a888;
+    border-top: 1px solid #27a888;
 }
 
 @media (min-width: 768px) {
@@ -210,54 +263,63 @@ footer {
         font-size: 14px;
     }
 
+    .top-nav {
+        font-size: 11px;
+    }
+
+    .top-nav a {
+        margin: 0 16px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header .subtitle {
+        font-size: 11px;
+    }
+
     .container {
-        max-width: 680px;
-        padding: 16px;
+        max-width: 720px;
+        padding: 24px;
     }
 
-    .section-title {
-        font-size: 13px;
-        padding: 12px 16px;
-        margin: -16px -16px 16px -16px;
+    .cmd-line {
+        font-size: 12px;
     }
 
-    .terminal-line {
-        font-size: 10px;
+    .about-terminal img {
+        max-width: 170px;
     }
 
-    .about-container img {
-        max-width: 180px;
-    }
-
-    .about-info {
-        padding: 16px;
+    .about-info p {
+        font-size: 11px;
     }
 
     .stack-pill {
         font-size: 10px;
-        padding: 6px 12px;
+        padding: 6px 10px;
     }
 
-    .log-prompt {
-        font-size: 12px;
-    }
-
-    .log-timestamp {
+    .post-meta {
         font-size: 10px;
     }
 
-    .log-message {
+    .post-title {
+        font-size: 13px;
+    }
+
+    .post-excerpt {
         font-size: 11px;
     }
 
-    .log-tags {
+    .post-tags {
         font-size: 9px;
-        margin-left: 28px;
     }
 
     .page-btn {
         font-size: 10px;
-        padding: 8px 14px;
+        padding: 10px 14px;
     }
 
     .page-info {
@@ -274,29 +336,42 @@ footer {
 }
 
 @media (max-width: 420px) {
-    .about-container {
+    .top-nav {
+        font-size: 8px;
+        padding: 10px 8px;
+    }
+
+    .top-nav a {
+        margin: 0 5px;
+    }
+
+    header h1 {
+        font-size: 13px;
+    }
+
+    .about-terminal {
         flex-direction: column;
+        align-items: center;
     }
 
-    .about-container p {
-        max-width: 90%;
+    .about-terminal img {
+        max-width: 120px;
     }
 
-    .about-container img {
-        max-width: 110px;
-        margin-left: 0;
-    }
-
-    .stack-pill {
-        font-size: 6px;
-        padding: 3px 5px;
-    }
-
-    .log-message {
+    .about-info p {
         font-size: 8px;
     }
 
-    .log-tags {
-        margin-left: 18px;
+    .stack-pill {
+        font-size: 7px;
+        padding: 3px 6px;
+    }
+
+    .post-title {
+        font-size: 9px;
+    }
+
+    .post-excerpt {
+        font-size: 8px;
     }
 }

@@ -10,29 +10,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<nav class="top-nav">
+    <span class="prompt">$</span>
+    <a href="#about">cd ~</a>
+    <a href="#stack">ls stack/</a>
+    <a href="#posts">ls posts/</a>
+    <a href="#links">cat links.txt</a>
+</nav>
+
 <header>
-    <h1>duv0_x profile_</h1>
+    <h1># duv0_x profile</h1>
+    <p class="subtitle">Every engineering problem tells a story. Here is mine.</p>
 </header>
 
-<div class="container about-container">
-    <p>
-        <img src="images/x-0vub-small.jpg" alt="Duv0-x">
-    </p>
-    <p class="about-info">
-        <span class="info-label">Name:</span><br>
-        Duván Ballén<br><br>
-        <span class="info-label">A.k.a:</span><br>
-        duv0_x<br><br>
-        <span class="info-label">Tech skills:</span><br>
-        DevOps and Cloud Engineering.<br><br>
-        <span class="info-label">Status:</span><br>
-        "Sr Platform Engineer @ Lulo Bank — but ping me if you have something exciting."
-    </p>
+<div class="container" id="about">
+    <div class="cmd-line">
+        <span class="prompt">$</span>
+        <span class="cmd">cat about.txt</span>
+    </div>
+
+    <div class="about-terminal">
+        <p>
+            <img src="images/x-0vub-small.jpg" alt="Duv0-x">
+        </p>
+        <div class="about-info">
+            <p><span class="info-label">Name:</span> Duván Ballén</p>
+            <p><span class="info-label">A.k.a:</span> duv0_x</p>
+            <p><span class="info-label">Role:</span> Sr Platform Engineer @ Lulo Bank</p>
+            <p><span class="info-label">Focus:</span> DevOps and Cloud Engineering</p>
+            <p><span class="info-label">Status:</span> "ping me if you have something exciting."</p>
+        </div>
+    </div>
 </div>
 
-<div class="container section">
-    <div class="section-title">Tech Stack</div>
-    <div class="terminal-line">$ ls -la ~/stack/</div>
+<div class="container" id="stack">
+    <div class="cmd-line">
+        <span class="prompt">$</span>
+        <span class="cmd">ls -la ~/stack/</span>
+    </div>
+
     <p class="stack-cloud">
         <span class="stack-pill">eventbridge</span>
         <span class="stack-pill">sqs</span>
@@ -63,112 +79,127 @@
     </p>
 </div>
 
-<div class="container section" id="work-log">
-    <div class="section-title">Work Log</div>
-    <div class="terminal-line">$ tail -f ~/work.log | paginate --page-size=5</div>
+<div class="container" id="posts">
+    <div class="cmd-line">
+        <span class="prompt">$</span>
+        <span class="cmd">ls -l ~/posts | paginate --page-size=5</span>
+    </div>
 
-    <div class="log-entries" id="log-entries">
-        <article class="log-entry" data-date="2026-07-23">
-            <div class="log-line">
-                <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-23 16:42</span>
-                <span class="log-message">Apliqué la cadena completa en stg para el bus de eventos KYB: monolito KYC + layer Python + lambda pdf-generator + reglas cross-account.</span>
+    <div class="posts-list" id="posts-list">
+        <article class="post-card" data-date="2026-07-23">
+            <div class="post-meta">
+                <span class="post-date">07/23/2026</span>
+                <span class="post-category">Engineering</span>
             </div>
-            <div class="log-tags">#eventbridge #sqs #lambda #terraform</div>
+            <h2 class="post-title">Apliqué la cadena completa en stg para el bus de eventos KYB</h2>
+            <p class="post-excerpt">Monolito KYC + layer Python + lambda pdf-generator + reglas cross-account. Cerrado el flujo end-to-end en stg.</p>
+            <div class="post-tags">#eventbridge #sqs #lambda #terraform</div>
         </article>
 
-        <article class="log-entry" data-date="2026-07-23">
-            <div class="log-line">
-                <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-23 14:15</span>
-                <span class="log-message">Cerré dos tickets de Fluid Attacks sin cambios de código: el remedio ya existía en commits hermanos de limpieza. Lección: revisar git log antes de planear.</span>
+        <article class="post-card" data-date="2026-07-23">
+            <div class="post-meta">
+                <span class="post-date">07/23/2026</span>
+                <span class="post-category">Security</span>
             </div>
-            <div class="log-tags">#security #git #jira</div>
+            <h2 class="post-title">Cerré dos tickets de Fluid Attacks sin cambios de código</h2>
+            <p class="post-excerpt">El remedio ya existía en commits hermanos de limpieza. Lección: revisar git log antes de planear.</p>
+            <div class="post-tags">#security #git #jira</div>
         </article>
 
-        <article class="log-entry" data-date="2026-07-22">
-            <div class="log-line">
-                <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-22 11:30</span>
-                <span class="log-message">Publiqué la layer ingest-events-layer-python en kyc-event-bus-lambdas con replicación. Fix de pipeline: pin de npm@10 porque npm 12 rompía node:20.</span>
+        <article class="post-card" data-date="2026-07-22">
+            <div class="post-meta">
+                <span class="post-date">07/22/2026</span>
+                <span class="post-category">Engineering</span>
             </div>
-            <div class="log-tags">#python #lambda #aws #cicd</div>
+            <h2 class="post-title">Publiqué la layer ingest-events-layer-python con replicación</h2>
+            <p class="post-excerpt">En kyc-event-bus-lambdas. Fix de pipeline: pin de npm@10 porque npm 12 rompía node:20.</p>
+            <div class="post-tags">#python #lambda #aws #cicd</div>
         </article>
 
-        <article class="log-entry" data-date="2026-07-21">
-            <div class="log-line">
-                <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-21 09:50</span>
-                <span class="log-message">Desplegué lambda-ob-pdf-generator en QA: corregí tests con Mock() y reemplacé la layer Node por ingest-events-layer-python.</span>
+        <article class="post-card" data-date="2026-07-21">
+            <div class="post-meta">
+                <span class="post-date">07/21/2026</span>
+                <span class="post-category">Engineering</span>
             </div>
-            <div class="log-tags">#lambda #sqs #python #qa</div>
+            <h2 class="post-title">Desplegué lambda-ob-pdf-generator en QA</h2>
+            <p class="post-excerpt">Corregí tests con Mock() y reemplacé la layer Node por ingest-events-layer-python.</p>
+            <div class="post-tags">#lambda #sqs #python #qa</div>
         </article>
 
-        <article class="log-entry" data-date="2026-07-20">
-            <div class="log-line">
-                <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-20 18:05</span>
-                <span class="log-message">Fix en la skill implementar: modelos sin benchmark ya no aparecen mezclados con los rankeados; ahora se consulta modelx en vivo.</span>
+        <article class="post-card" data-date="2026-07-20">
+            <div class="post-meta">
+                <span class="post-date">07/20/2026</span>
+                <span class="post-category">AI Tooling</span>
             </div>
-            <div class="log-tags">#ai #ollama #claude #opencode</div>
+            <h2 class="post-title">Fix en la skill implementar con modelx en vivo</h2>
+            <p class="post-excerpt">Modelos sin benchmark ya no aparecen mezclados con los rankeados; ahora se consulta modelx en vivo.</p>
+            <div class="post-tags">#ai #ollama #claude #opencode</div>
         </article>
 
-        <article class="log-entry" data-date="2026-07-19">
-            <div class="log-line">
-                <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-19 21:12</span>
-                <span class="log-message">Integré modelx (catálogo de LLMs) en la skill implementar para seleccionar modelos por coding_elo en vez de tabla estática.</span>
+        <article class="post-card" data-date="2026-07-19">
+            <div class="post-meta">
+                <span class="post-date">07/19/2026</span>
+                <span class="post-category">AI Tooling</span>
             </div>
-            <div class="log-tags">#rust #ai #cli #llm</div>
+            <h2 class="post-title">Integré modelx en la skill implementar</h2>
+            <p class="post-excerpt">Catálogo de LLMs para seleccionar modelos por coding_elo en vez de tabla estática.</p>
+            <div class="post-tags">#rust #ai #cli #llm</div>
         </article>
 
-        <article class="log-entry" data-date="2026-07-17">
-            <div class="log-line">
-                <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-17 15:38</span>
-                <span class="log-message">Implementé la lambda lambda-ob-pdf-generator + SQS trigger en el repo de onboarding. Lección: los placeholders service.zip deben existir para el apply.</span>
+        <article class="post-card" data-date="2026-07-17">
+            <div class="post-meta">
+                <span class="post-date">07/17/2026</span>
+                <span class="post-category">Engineering</span>
             </div>
-            <div class="log-tags">#lambda #sqs #terraform #python</div>
+            <h2 class="post-title">Implementé lambda-ob-pdf-generator + SQS trigger</h2>
+            <p class="post-excerpt">En el repo de onboarding. Lección: los placeholders service.zip deben existir para el apply.</p>
+            <div class="post-tags">#lambda #sqs #terraform #python</div>
         </article>
 
-        <article class="log-entry" data-date="2026-07-16">
-            <div class="log-line">
-                <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-16 10:22</span>
-                <span class="log-message">Ajusté timeout de un job AWS Batch de 1800 a 5400s en prod via Terraform, aislando el cambio con -target.</span>
+        <article class="post-card" data-date="2026-07-16">
+            <div class="post-meta">
+                <span class="post-date">07/16/2026</span>
+                <span class="post-category">Infrastructure</span>
             </div>
-            <div class="log-tags">#aws-batch #terraform #prod</div>
+            <h2 class="post-title">Ajusté timeout de job AWS Batch a 5400s en prod</h2>
+            <p class="post-excerpt">Via Terraform, aislando el cambio con -target para no arrastrar drift ajeno.</p>
+            <div class="post-tags">#aws-batch #terraform #prod</div>
         </article>
 
-        <article class="log-entry" data-date="2026-07-15">
-            <div class="log-line">
-                <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-15 13:47</span>
-                <span class="log-message">Restauré trazas Zipkin/OpenSearch de más de 15 días para evidencia SFC: índice de 210M docs, 103.5GB.</span>
+        <article class="post-card" data-date="2026-07-15">
+            <div class="post-meta">
+                <span class="post-date">07/15/2026</span>
+                <span class="post-category">On-call</span>
             </div>
-            <div class="log-tags">#opensearch #zipkin #sfc #aws</div>
+            <h2 class="post-title">Restauré trazas Zipkin/OpenSearch de más de 15 días</h2>
+            <p class="post-excerpt">Para evidencia SFC: índice de 210M docs, 103.5GB.</p>
+            <div class="post-tags">#opensearch #zipkin #sfc #aws</div>
         </article>
 
-        <article class="log-entry" data-date="2026-07-13">
-            <div class="log-line">
-                <span class="log-prompt">>></span>
-                <span class="log-timestamp">2026-07-13 19:55</span>
-                <span class="log-message">Configuré pantalla SPI 3.5" en Raspberry Pi 3 con overlay nativo del kernel piscreen, evitando scripts de terceros.</span>
+        <article class="post-card" data-date="2026-07-13">
+            <div class="post-meta">
+                <span class="post-date">07/13/2026</span>
+                <span class="post-category">Hardware</span>
             </div>
-            <div class="log-tags">#raspberrypi #spi #linux #iot</div>
+            <h2 class="post-title">Configuré pantalla SPI 3.5" en Raspberry Pi 3</h2>
+            <p class="post-excerpt">Con overlay nativo del kernel piscreen, evitando scripts de terceros.</p>
+            <div class="post-tags">#raspberrypi #spi #linux #iot</div>
         </article>
     </div>
 
     <div class="pagination" id="pagination">
-        <button class="page-btn" id="prev-btn" disabled>< prev</button>
+        <button class="page-btn" id="prev-btn" disabled>&lt; prev</button>
         <span class="page-info" id="page-info">1 / 2</span>
-        <button class="page-btn" id="next-btn">next ></button>
+        <button class="page-btn" id="next-btn">next &gt;</button>
     </div>
 </div>
 
-<div class="container section">
-    <div class="section-title">Links</div>
-    <div class="terminal-line">$ cat ~/links.txt</div>
+<div class="container" id="links">
+    <div class="cmd-line">
+        <span class="prompt">$</span>
+        <span class="cmd">cat ~/links.txt</span>
+    </div>
+
     <p class="links-list">
         💼 <a href="https://www.linkedin.com/in/duvanballen" style="color: #e06c76;">LinkedIn</a>
         🧑🏻‍💻 <a href="https://github.com/duv0-x" style="color: #98d1cc;">GitHub</a>
@@ -181,9 +212,9 @@
 
 <script>
     (function() {
-        const entries = document.querySelectorAll('.log-entry');
+        const cards = document.querySelectorAll('.post-card');
         const pageSize = 5;
-        const totalPages = Math.ceil(entries.length / pageSize);
+        const totalPages = Math.ceil(cards.length / pageSize);
         let currentPage = 1;
 
         const prevBtn = document.getElementById('prev-btn');
@@ -194,8 +225,8 @@
             const start = (page - 1) * pageSize;
             const end = start + pageSize;
 
-            entries.forEach((entry, index) => {
-                entry.style.display = (index >= start && index < end) ? 'block' : 'none';
+            cards.forEach((card, index) => {
+                card.style.display = (index >= start && index < end) ? 'block' : 'none';
             });
 
             prevBtn.disabled = page === 1;
