@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duv0-x Profile</title>
+    <title>duv0_x :: log</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,8 +30,9 @@
     </p>
 </div>
 
-<div class="container tech-stack">
-    <h3>> Tech Stack</h3>
+<div class="container section">
+    <div class="section-title">[ SECTION :: TECH STACK ]</div>
+    <div class="terminal-line">$ ls -la ~/stack/</div>
     <p class="stack-cloud">
         <span class="stack-pill">eventbridge</span>
         <span class="stack-pill">sqs</span>
@@ -62,107 +63,157 @@
     </p>
 </div>
 
-<div class="container timeline">
-    <h3>> Work Log</h3>
+<div class="container section" id="work-log">
+    <div class="section-title">[ SECTION :: WORK LOG ]</div>
+    <div class="terminal-line">$ tail -f ~/work.log | paginate --page-size=5</div>
 
-    <article class="sms-post">
-        <div class="sms-meta">2026-07-23</div>
-        <div class="sms-bubble">
-            <span class="sms-prefix">>></span>
-            <p>Apliqué la cadena completa en stg para el bus de eventos KYB: monolito KYC + layer Python + lambda pdf-generator + reglas cross-account.</p>
-            <p class="sms-tags">#eventbridge #sqs #lambda #terraform</p>
-        </div>
-    </article>
+    <div class="log-entries" id="log-entries">
+        <article class="log-entry" data-date="2026-07-23">
+            <div class="log-line">
+                <span class="log-prompt">>></span>
+                <span class="log-timestamp">2026-07-23</span>
+                <span class="log-message">Apliqué la cadena completa en stg para el bus de eventos KYB: monolito KYC + layer Python + lambda pdf-generator + reglas cross-account.</span>
+            </div>
+            <div class="log-tags">#eventbridge #sqs #lambda #terraform</div>
+        </article>
 
-    <article class="sms-post">
-        <div class="sms-meta">2026-07-23</div>
-        <div class="sms-bubble">
-            <span class="sms-prefix">>></span>
-            <p>Cerré dos tickets de Fluid Attacks sin cambios de código: el remedio ya existía en commits hermanos de limpieza. Lección: revisar git log antes de planear.</p>
-            <p class="sms-tags">#security #git #jira</p>
-        </div>
-    </article>
+        <article class="log-entry" data-date="2026-07-23">
+            <div class="log-line">
+                <span class="log-prompt">>></span>
+                <span class="log-timestamp">2026-07-23</span>
+                <span class="log-message">Cerré dos tickets de Fluid Attacks sin cambios de código: el remedio ya existía en commits hermanos de limpieza. Lección: revisar git log antes de planear.</span>
+            </div>
+            <div class="log-tags">#security #git #jira</div>
+        </article>
 
-    <article class="sms-post">
-        <div class="sms-meta">2026-07-22</div>
-        <div class="sms-bubble">
-            <span class="sms-prefix">>></span>
-            <p>Publiqué la layer ingest-events-layer-python en kyc-event-bus-lambdas con replicación. Fix de pipeline: pin de npm@10 porque npm 12 rompía node:20.</p>
-            <p class="sms-tags">#python #lambda #aws #cicd</p>
-        </div>
-    </article>
+        <article class="log-entry" data-date="2026-07-22">
+            <div class="log-line">
+                <span class="log-prompt">>></span>
+                <span class="log-timestamp">2026-07-22</span>
+                <span class="log-message">Publiqué la layer ingest-events-layer-python en kyc-event-bus-lambdas con replicación. Fix de pipeline: pin de npm@10 porque npm 12 rompía node:20.</span>
+            </div>
+            <div class="log-tags">#python #lambda #aws #cicd</div>
+        </article>
 
-    <article class="sms-post">
-        <div class="sms-meta">2026-07-21</div>
-        <div class="sms-bubble">
-            <span class="sms-prefix">>></span>
-            <p>Desplegué lambda-ob-pdf-generator en QA: corregí tests con Mock() y reemplacé la layer Node por ingest-events-layer-python.</p>
-            <p class="sms-tags">#lambda #sqs #python #qa</p>
-        </div>
-    </article>
+        <article class="log-entry" data-date="2026-07-21">
+            <div class="log-line">
+                <span class="log-prompt">>></span>
+                <span class="log-timestamp">2026-07-21</span>
+                <span class="log-message">Desplegué lambda-ob-pdf-generator en QA: corregí tests con Mock() y reemplacé la layer Node por ingest-events-layer-python.</span>
+            </div>
+            <div class="log-tags">#lambda #sqs #python #qa</div>
+        </article>
 
-    <article class="sms-post">
-        <div class="sms-meta">2026-07-20</div>
-        <div class="sms-bubble">
-            <span class="sms-prefix">>></span>
-            <p>Fix en la skill implementar: modelos sin benchmark ya no aparecen mezclados con los rankeados; ahora se consulta modelx en vivo.</p>
-            <p class="sms-tags">#ai #ollama #claude #opencode</p>
-        </div>
-    </article>
+        <article class="log-entry" data-date="2026-07-20">
+            <div class="log-line">
+                <span class="log-prompt">>></span>
+                <span class="log-timestamp">2026-07-20</span>
+                <span class="log-message">Fix en la skill implementar: modelos sin benchmark ya no aparecen mezclados con los rankeados; ahora se consulta modelx en vivo.</span>
+            </div>
+            <div class="log-tags">#ai #ollama #claude #opencode</div>
+        </article>
 
-    <article class="sms-post">
-        <div class="sms-meta">2026-07-19</div>
-        <div class="sms-bubble">
-            <span class="sms-prefix">>></span>
-            <p>Integré modelx (catálogo de LLMs) en la skill implementar para seleccionar modelos por coding_elo en vez de tabla estática.</p>
-            <p class="sms-tags">#rust #ai #cli #llm</p>
-        </div>
-    </article>
+        <article class="log-entry" data-date="2026-07-19">
+            <div class="log-line">
+                <span class="log-prompt">>></span>
+                <span class="log-timestamp">2026-07-19</span>
+                <span class="log-message">Integré modelx (catálogo de LLMs) en la skill implementar para seleccionar modelos por coding_elo en vez de tabla estática.</span>
+            </div>
+            <div class="log-tags">#rust #ai #cli #llm</div>
+        </article>
 
-    <article class="sms-post">
-        <div class="sms-meta">2026-07-17</div>
-        <div class="sms-bubble">
-            <span class="sms-prefix">>></span>
-            <p>Implementé la lambda lambda-ob-pdf-generator + SQS trigger en el repo de onboarding. Lección: los placeholders service.zip deben existir para el apply.</p>
-            <p class="sms-tags">#lambda #sqs #terraform #python</p>
-        </div>
-    </article>
+        <article class="log-entry" data-date="2026-07-17">
+            <div class="log-line">
+                <span class="log-prompt">>></span>
+                <span class="log-timestamp">2026-07-17</span>
+                <span class="log-message">Implementé la lambda lambda-ob-pdf-generator + SQS trigger en el repo de onboarding. Lección: los placeholders service.zip deben existir para el apply.</span>
+            </div>
+            <div class="log-tags">#lambda #sqs #terraform #python</div>
+        </article>
 
-    <article class="sms-post">
-        <div class="sms-meta">2026-07-16</div>
-        <div class="sms-bubble">
-            <span class="sms-prefix">>></span>
-            <p>Ajusté timeout de un job AWS Batch de 1800 a 5400s en prod via Terraform, aislando el cambio con -target.</p>
-            <p class="sms-tags">#aws-batch #terraform #prod</p>
-        </div>
-    </article>
+        <article class="log-entry" data-date="2026-07-16">
+            <div class="log-line">
+                <span class="log-prompt">>></span>
+                <span class="log-timestamp">2026-07-16</span>
+                <span class="log-message">Ajusté timeout de un job AWS Batch de 1800 a 5400s en prod via Terraform, aislando el cambio con -target.</span>
+            </div>
+            <div class="log-tags">#aws-batch #terraform #prod</div>
+        </article>
 
-    <article class="sms-post">
-        <div class="sms-meta">2026-07-15</div>
-        <div class="sms-bubble">
-            <span class="sms-prefix">>></span>
-            <p>Restauré trazas Zipkin/OpenSearch de más de 15 días para evidencia SFC: índice de 210M docs, 103.5GB.</p>
-            <p class="sms-tags">#opensearch #zipkin #sfc #aws</p>
-        </div>
-    </article>
+        <article class="log-entry" data-date="2026-07-15">
+            <div class="log-line">
+                <span class="log-prompt">>></span>
+                <span class="log-timestamp">2026-07-15</span>
+                <span class="log-message">Restauré trazas Zipkin/OpenSearch de más de 15 días para evidencia SFC: índice de 210M docs, 103.5GB.</span>
+            </div>
+            <div class="log-tags">#opensearch #zipkin #sfc #aws</div>
+        </article>
 
-    <article class="sms-post">
-        <div class="sms-meta">2026-07-13</div>
-        <div class="sms-bubble">
-            <span class="sms-prefix">>></span>
-            <p>Configuré pantalla SPI 3.5" en Raspberry Pi 3 con overlay nativo del kernel piscreen, evitando scripts de terceros.</p>
-            <p class="sms-tags">#raspberrypi #spi #linux #iot</p>
-        </div>
-    </article>
+        <article class="log-entry" data-date="2026-07-13">
+            <div class="log-line">
+                <span class="log-prompt">>></span>
+                <span class="log-timestamp">2026-07-13</span>
+                <span class="log-message">Configuré pantalla SPI 3.5" en Raspberry Pi 3 con overlay nativo del kernel piscreen, evitando scripts de terceros.</span>
+            </div>
+            <div class="log-tags">#raspberrypi #spi #linux #iot</div>
+        </article>
+    </div>
+
+    <div class="pagination" id="pagination">
+        <button class="page-btn" id="prev-btn" disabled>< prev</button>
+        <span class="page-info" id="page-info">1 / 2</span>
+        <button class="page-btn" id="next-btn">next ></button>
+    </div>
 </div>
 
-<div class="container social-networks">
-    <h3>> Links</h3>
-    <p>💼 <a href="https://www.linkedin.com/in/duvanballen" style="color: #e06c76;">LinkedIn</a> 🧑🏻‍💻 <a href="https://github.com/duv0-x" style="color: #98d1cc;">GitHub</a></p><br>
+<div class="container section">
+    <div class="section-title">[ SECTION :: LINKS ]</div>
+    <div class="terminal-line">$ cat ~/links.txt</div>
+    <p class="links-list">
+        💼 <a href="https://www.linkedin.com/in/duvanballen" style="color: #e06c76;">LinkedIn</a>
+        🧑🏻‍💻 <a href="https://github.com/duv0-x" style="color: #98d1cc;">GitHub</a>
+    </p>
 </div>
 
 <footer>
     <p>Build with ☕ from Colombia 🇨🇴</p>
 </footer>
+
+<script>
+    (function() {
+        const entries = document.querySelectorAll('.log-entry');
+        const pageSize = 5;
+        const totalPages = Math.ceil(entries.length / pageSize);
+        let currentPage = 1;
+
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const pageInfo = document.getElementById('page-info');
+
+        function showPage(page) {
+            const start = (page - 1) * pageSize;
+            const end = start + pageSize;
+
+            entries.forEach((entry, index) => {
+                entry.style.display = (index >= start && index < end) ? 'block' : 'none';
+            });
+
+            prevBtn.disabled = page === 1;
+            nextBtn.disabled = page === totalPages;
+            pageInfo.textContent = page + ' / ' + totalPages;
+            currentPage = page;
+        }
+
+        prevBtn.addEventListener('click', function() {
+            if (currentPage > 1) showPage(currentPage - 1);
+        });
+
+        nextBtn.addEventListener('click', function() {
+            if (currentPage < totalPages) showPage(currentPage + 1);
+        });
+
+        showPage(1);
+    })();
+</script>
 </body>
 </html>

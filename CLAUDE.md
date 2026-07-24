@@ -7,8 +7,8 @@ This document provides comprehensive guidance for AI assistants working on the d
 **Type**: Personal Portfolio Website (GitHub Pages)
 **Owner**: Duván Ballén (duv0_x)
 **Tech Stack**: Static HTML/CSS
-**Purpose**: Professional profile and activity timeline showcasing real daily work across SRE/DevOps, cloud engineering, personal projects, and AI tooling.
-**Theme**: Retro pixel-art aesthetic with dark color scheme; timeline posts rendered as SMS/Beeper-style messages
+**Purpose**: Professional profile and activity log showcasing real daily work across SRE/DevOps, cloud engineering, personal projects, and AI tooling.
+**Theme**: Retro pixel-art / terminal aesthetic with dark color scheme; log entries rendered as terminal lines with `>>` prompt
 
 ## Codebase Structure
 
@@ -68,20 +68,23 @@ The page is divided into semantic containers:
 
 1. **Header** (`<header>`) - Site title/branding
 2. **About Container** (`.about-container`) - Profile image and personal info
-3. **Tech Stack** (`.tech-stack`) - Pixelated pills derived from post hashtags
-4. **Timeline** (`.timeline`) - SMS/Beeper-style work log posts
-5. **Social Networks** (`.social-networks`) - Professional and social links
+3. **Tech Stack** (`.section` with `.section-title`) - Pixelated pills derived from post hashtags, styled as a terminal package list
+4. **Work Log** (`.section` with `#work-log`) - Terminal-style log entries with pagination (5 per page)
+5. **Links** (`.section` with `.section-title`) - Professional and social links
 6. **Footer** (`<footer>`) - Build credits
 
-### Timeline Posts
+### Log Entries
 
-Posts use `.sms-post` containers with:
-- `.sms-meta` - Date stamp (top-right, small)
-- `.sms-bubble` - Message bubble with border and dark background
-- `.sms-prefix` - `>>` prefix in coral accent color
-- `.sms-tags` - Hashtags in primary accent color
+Posts use `.log-entry` containers with:
+- `.log-line` - One terminal line containing:
+  - `.log-prompt` - `>>` prefix in coral accent color
+  - `.log-timestamp` - Date stamp in primary accent color
+  - `.log-message` - Activity description in secondary accent color
+- `.log-tags` - Hashtags in primary accent color
 
-New posts are added by duplicating an existing `<article class="sms-post">` block. When a new technology hashtag is introduced, add the corresponding `.stack-pill` to the `.tech-stack` cloud.
+The Work Log uses vanilla JavaScript for pagination: 5 entries per page, with `prev`/`next` buttons.
+
+New posts are added by duplicating an existing `<article class="log-entry">` block inside `#log-entries`. When a new technology hashtag is introduced, add the corresponding `.stack-pill` to the Tech Stack cloud. Remember to keep the total entry count aligned with the pagination logic (`pageSize = 5` in the inline script).
 
 ### Layout Patterns
 - **Flexbox for about section**: `display: flex` with `align-items: center` and `gap: 10px`
@@ -185,7 +188,7 @@ Before committing changes to this **static site**, verify:
 
 ### What NOT to Do
 
-❌ **Don't** add JavaScript unless explicitly requested (this is a pure HTML/CSS site)
+✅ **JavaScript is allowed only for small, self-contained interactions** like pagination; keep it inline and minimal
 ❌ **Don't** create new CSS files - all styles go in `styles.css`
 ❌ **Don't** add build tools, preprocessors, or frameworks
 ❌ **Don't** change the font family without explicit permission
