@@ -736,6 +736,10 @@ footer {
     display: block;
 }
 
+[data-theme="dark"] .footer-social a[aria-label="GitHub"] img {
+    filter: invert(1);
+}
+
 @media (max-width: 640px) {
     .top-nav {
         padding: 12px 16px;
