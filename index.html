@@ -14,9 +14,9 @@
 <nav class="top-nav">
     <span class="prompt">$</span>
     <a href="#">cd ~</a>
-    <a href="#about">cat about.txt</a>
-    <a href="#stack">ls stack/</a>
-    <a href="#posts">ls posts/</a>
+    <a href="#about">whoami --stack</a>
+    <a href="#posts">tail -f ~/journal.log --mode=microblog</a>
+    <a href="#stack">htop --tags</a>
     <a href="#links">cat links.txt</a>
     <div class="nav-controls">
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">[theme]</button>
@@ -38,70 +38,52 @@
     <main class="container">
         <div class="cmd-line">
             <span class="prompt">$</span>
-            <span class="cmd" data-en="cat welcome.txt" data-es="cat bienvenida.txt">cat welcome.txt</span>
+            <span class="cmd" data-en="whoami --stack # duv0_x profile and skills" data-es="whoami --stack # duv0_x profile and skills">whoami --stack # duv0_x profile and skills</span>
         </div>
 
         <section class="welcome" id="about">
-            <h1># duv0_x profile</h1>
-            <p data-en="Every engineering problem tells a story. Here, I share the integrations, on-call shifts, experiments and lessons that shape how I build, how I operate, and how I keep systems running."
-               data-es="Cada problema de ingeniería cuenta una historia. Aquí comparto las integraciones, guardias, experimentos y lecciones que moldean cómo construyo, opero y mantengo sistemas funcionando.">
-                Cada problema de ingeniería cuenta una historia. Aquí comparto las integraciones, guardias, experimentos y lecciones que moldean cómo construyo, opero y mantengo sistemas funcionando.
-            </p>
-
-            <div class="about-grid">
-                <div class="profile-glitch">
-                    <img src="images/x-0vub-small.jpg" alt="Duv0-x" class="profile-img">
-                    <img src="images/x-0vub-small.jpg" alt="" class="profile-glitch-layer glitch-cyan">
-                    <img src="images/x-0vub-small.jpg" alt="" class="profile-glitch-layer glitch-magenta">
+            <div class="welcome-grid">
+                <div class="welcome-left">
+                    <div class="about-grid">
+                        <div class="profile-glitch">
+                            <img src="images/x-0vub-small.jpg" alt="Duv0-x" class="profile-img">
+                            <img src="images/x-0vub-small.jpg" alt="" class="profile-glitch-layer glitch-cyan">
+                            <img src="images/x-0vub-small.jpg" alt="" class="profile-glitch-layer glitch-magenta">
+                        </div>
+                        <div class="about-info">
+                            <p><span class="info-label" data-en="Name:" data-es="Nombre:">Nombre:</span> Duván Ballén</p>
+                            <p><span class="info-label" data-en="A.k.a:" data-es="A.k.a:">A.k.a:</span> duv0_x</p>
+                            <p><span class="info-label" data-en="Role:" data-es="Rol:">Rol:</span> <span data-en="Sr Platform Engineer" data-es="Sr Platform Engineer">Sr Platform Engineer</span></p>
+                            <p><span class="info-label" data-en="Focus:" data-es="Enfoque:">Enfoque:</span> DevOps and Cloud Engineering</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-info">
-                    <p><span class="info-label" data-en="Name:" data-es="Nombre:">Nombre:</span> Duván Ballén</p>
-                    <p><span class="info-label" data-en="A.k.a:" data-es="A.k.a:">A.k.a:</span> duv0_x</p>
-                    <p><span class="info-label" data-en="Role:" data-es="Rol:">Rol:</span> <span data-en="Sr Platform Engineer" data-es="Sr Platform Engineer">Sr Platform Engineer</span></p>
-                    <p><span class="info-label" data-en="Focus:" data-es="Enfoque:">Enfoque:</span> DevOps and Cloud Engineering</p>
+                <div class="welcome-right">
+                    <div class="trophy-grid" aria-label="Tech stack">
+                        <span class="trophy" title="AWS"><img src="https://skillicons.dev/icons?i=aws" alt="AWS"></span>
+                        <span class="trophy" title="Terraform"><img src="https://skillicons.dev/icons?i=terraform" alt="Terraform"></span>
+                        <span class="trophy" title="Python"><img src="https://skillicons.dev/icons?i=python" alt="Python"></span>
+                        <span class="trophy" title="Linux"><img src="https://skillicons.dev/icons?i=linux" alt="Linux"></span>
+                        <span class="trophy" title="Docker"><img src="https://skillicons.dev/icons?i=docker" alt="Docker"></span>
+                        <span class="trophy" title="Kubernetes"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernetes"></span>
+                        <span class="trophy" title="GitHub Actions"><img src="https://skillicons.dev/icons?i=githubactions" alt="GitHub Actions"></span>
+                        <span class="trophy" title="Git"><img src="https://skillicons.dev/icons?i=git" alt="Git"></span>
+                        <span class="trophy" title="Bash"><img src="https://skillicons.dev/icons?i=bash" alt="Bash"></span>
+                        <span class="trophy" title="Go"><img src="https://skillicons.dev/icons?i=go" alt="Go"></span>
+                        <span class="trophy" title="Obsidian"><img src="https://skillicons.dev/icons?i=obsidian" alt="Obsidian"></span>
+                        <span class="trophy" title="Cloudflare"><img src="https://skillicons.dev/icons?i=cloudflare" alt="Cloudflare"></span>
+                        <span class="trophy" title="Supabase"><img src="https://skillicons.dev/icons?i=supabase" alt="Supabase"></span>
+                        <span class="trophy" title="htmx"><img src="https://skillicons.dev/icons?i=htmx" alt="htmx"></span>
+                        <span class="trophy" title="IntelliJ IDEA"><img src="https://skillicons.dev/icons?i=idea" alt="IntelliJ IDEA"></span>
+                        <span class="trophy" title="GCP"><img src="https://skillicons.dev/icons?i=gcp" alt="GCP"></span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="cmd-line" id="stack">
-            <span class="prompt">$</span>
-            <span class="cmd" data-en="ls -la ~/stack/" data-es="ls -la ~/stack/">ls -la ~/stack/</span>
-        </div>
-
-        <section class="stack-section">
-            <p class="stack-cloud">
-                <span class="stack-pill">eventbridge</span>
-                <span class="stack-pill">sqs</span>
-                <span class="stack-pill">lambda</span>
-                <span class="stack-pill">terraform</span>
-                <span class="stack-pill">python</span>
-                <span class="stack-pill">aws</span>
-                <span class="stack-pill">git</span>
-                <span class="stack-pill">jira</span>
-                <span class="stack-pill">cicd</span>
-                <span class="stack-pill">qa</span>
-                <span class="stack-pill">ai</span>
-                <span class="stack-pill">ollama</span>
-                <span class="stack-pill">claude</span>
-                <span class="stack-pill">opencode</span>
-                <span class="stack-pill">rust</span>
-                <span class="stack-pill">llm</span>
-                <span class="stack-pill">cli</span>
-                <span class="stack-pill">aws-batch</span>
-                <span class="stack-pill">prod</span>
-                <span class="stack-pill">opensearch</span>
-                <span class="stack-pill">zipkin</span>
-                <span class="stack-pill">sfc</span>
-                <span class="stack-pill">raspberrypi</span>
-                <span class="stack-pill">spi</span>
-                <span class="stack-pill">linux</span>
-                <span class="stack-pill">iot</span>
-            </p>
-        </section>
-
         <div class="cmd-line" id="posts">
             <span class="prompt">$</span>
-            <span class="cmd" data-en="tail -f ~/journal.log" data-es="tail -f ~/journal.log">tail -f ~/journal.log</span>
+            <span class="cmd" data-en="tail -f ~/journal.log --mode=microblog" data-es="tail -f ~/journal.log --mode=microblog">tail -f ~/journal.log --mode=microblog</span>
         </div>
 
         <section class="posts-section">
@@ -317,6 +299,23 @@
             </div>
         </section>
 
+        <div class="cmd-line" id="stack">
+            <span class="prompt">$</span>
+            <span class="cmd" data-en="htop --tags --type=bar-chart" data-es="htop --tags --type=bar-chart">htop --tags --type=bar-chart</span>
+        </div>
+
+        <section class="stack-section">
+            <div class="stack-bars" id="stack-bars"></div>
+            <div class="pagination stack-pagination" id="stack-pagination">
+                <span class="showing-info" id="stack-showing-info" data-en="Showing 1-10 of 0 tags" data-es="Mostrando 1-10 de 0 etiquetas">Mostrando 1-10 de 0 etiquetas</span>
+                <div class="page-controls">
+                    <button class="page-btn" id="stack-prev-btn" disabled data-en="< prev" data-es="< ant">&lt; ant</button>
+                    <span class="page-info" id="stack-page-info">1 / 1</span>
+                    <button class="page-btn" id="stack-next-btn" data-en="next >" data-es="sig >">sig &gt;</button>
+                </div>
+            </div>
+        </section>
+
         <div class="cmd-line" id="links">
             <span class="prompt">$</span>
             <span class="cmd" data-en="cat ~/links.txt" data-es="cat ~/links.txt">cat ~/links.txt</span>
@@ -388,6 +387,10 @@
         const totalPages = Math.ceil(cards.length / pageSize);
         let currentPage = 1;
 
+        const stackPageSize = 10;
+        let stackCurrentPage = 1;
+        let stackTotalPages = 1;
+
         function updatePaginationLabels(lang) {
             const start = (currentPage - 1) * pageSize;
             const end = Math.min(start + pageSize, cards.length);
@@ -415,6 +418,25 @@
             });
 
             updatePaginationLabels(lang);
+            updateStackPaginationLang(lang);
+        }
+
+        function updateStackPaginationLang(lang) {
+            const start = (stackCurrentPage - 1) * stackPageSize;
+            const rows = document.querySelectorAll('.stack-bar-row');
+            const end = Math.min(start + stackPageSize, rows.length);
+            const showingInfo = document.getElementById('stack-showing-info');
+            const prevBtn = document.getElementById('stack-prev-btn');
+            const nextBtn = document.getElementById('stack-next-btn');
+            if (lang === 'es') {
+                if (showingInfo) showingInfo.textContent = 'Mostrando ' + (start + 1) + '-' + end + ' de ' + rows.length + ' herramientas';
+                if (prevBtn) prevBtn.textContent = '< ant';
+                if (nextBtn) nextBtn.textContent = 'sig >';
+            } else {
+                if (showingInfo) showingInfo.textContent = 'Showing ' + (start + 1) + '-' + end + ' of ' + rows.length + ' tools';
+                if (prevBtn) prevBtn.textContent = '< prev';
+                if (nextBtn) nextBtn.textContent = 'next >';
+            }
         }
 
         setLang(initialLang);
@@ -460,6 +482,87 @@
         });
 
         showPage(1);
+
+        function renderStackBars() {
+            const tagElements = document.querySelectorAll('.post-tags .tag');
+            const counts = {};
+            tagElements.forEach(function(el) {
+                const tag = el.textContent.trim().toLowerCase();
+                counts[tag] = (counts[tag] || 0) + 1;
+            });
+
+            const sorted = Object.keys(counts).map(function(tag) {
+                return { tag: tag, count: counts[tag] };
+            }).sort(function(a, b) {
+                if (b.count !== a.count) return b.count - a.count;
+                return a.tag.localeCompare(b.tag);
+            });
+
+            const max = sorted.length ? sorted[0].count : 0;
+            const colors = ['var(--prompt)', 'var(--link)', 'var(--tag-text)'];
+            const stackContainer = document.getElementById('stack-bars');
+            const stackPagination = document.getElementById('stack-pagination');
+            if (!stackContainer) return;
+
+            stackContainer.innerHTML = '';
+            sorted.forEach(function(item, index) {
+                const pct = max ? Math.round((item.count / max) * 100) : 0;
+                const row = document.createElement('div');
+                row.className = 'stack-bar-row';
+                row.innerHTML =
+                    '<span class="stack-bar-label" title="' + item.tag + '">' + item.tag + '</span>' +
+                    '<span class="stack-bar-track">' +
+                        '<span class="stack-bar-fill" style="width:' + pct + '%; background-color:' + colors[index % colors.length] + ';"></span>' +
+                    '</span>' +
+                    '<span class="stack-bar-value">' + pct + '%</span>';
+                stackContainer.appendChild(row);
+            });
+
+            initStackPagination(sorted.length);
+        }
+
+        function initStackPagination(totalItems) {
+            stackTotalPages = Math.max(1, Math.ceil(totalItems / stackPageSize));
+            const stackPrevBtn = document.getElementById('stack-prev-btn');
+            const stackNextBtn = document.getElementById('stack-next-btn');
+            const stackPageInfo = document.getElementById('stack-page-info');
+
+            function showStackPage(page) {
+                const rows = document.querySelectorAll('.stack-bar-row');
+                const start = (page - 1) * stackPageSize;
+                const end = Math.min(start + stackPageSize, rows.length);
+
+                rows.forEach(function(row, index) {
+                    row.style.display = (index >= start && index < end) ? 'grid' : 'none';
+                });
+
+                stackPrevBtn.disabled = page === 1;
+                stackNextBtn.disabled = page === stackTotalPages;
+                stackPageInfo.textContent = page + ' / ' + stackTotalPages;
+
+                const lang = localStorage.getItem('lang') || 'es';
+                const showingInfo = document.getElementById('stack-showing-info');
+                if (lang === 'es') {
+                    showingInfo.textContent = 'Mostrando ' + (start + 1) + '-' + end + ' de ' + rows.length + ' etiquetas';
+                } else {
+                    showingInfo.textContent = 'Showing ' + (start + 1) + '-' + end + ' of ' + rows.length + ' tags';
+                }
+
+                stackCurrentPage = page;
+            }
+
+            stackPrevBtn.addEventListener('click', function() {
+                if (stackCurrentPage > 1) showStackPage(stackCurrentPage - 1);
+            });
+
+            stackNextBtn.addEventListener('click', function() {
+                if (stackCurrentPage < stackTotalPages) showStackPage(stackCurrentPage + 1);
+            });
+
+            showStackPage(1);
+        }
+
+        renderStackBars();
     })();
 </script>
 </body>
